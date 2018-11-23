@@ -1,1 +1,34 @@
-<tw-storydata name="Project Cluedo" startnode="1" creator="Twine" creator-version="2.2.1" ifid="7576BCC8-4CE5-40DD-965B-F3F8A3A40A65" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="668,308" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+<tw-storydata name="Project Cluedo" startnode="1" creator="Twine" creator-version="2.2.1" ifid="7576BCC8-4CE5-40DD-965B-F3F8A3A40A65" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+
+
+</script><tw-passagedata pid="1" name="Start" tags="" position="293,292" size="100,100">(set: $hasNotebook to 0)
+(set: $notebookRef to [[Start]])
+$notebookRef
+You wake up in a dimly lit room on a boat. You&#39;re on your way to an island to inquire about an unsolved murder-mystery that took place fifty years ago. Straight in front of the bed is the [[door]] leading out of the room and to the right of the bed is a [[desk]] cluttered with what seems to papers.
+
+[[walk towards door]]
+[[go over to the desk]]</tw-passagedata><tw-passagedata pid="2" name="door" tags="" position="649,85" size="100,100">From close inspection, the door seems to made of mahogany. It seems well worn out and hasn&#39;t been refurbished in some time. The handle seems to have collected a small layer of dust through lack of usage.
+
+You notice that you&#39;re missing your notepad and [[go over to the desk]] to search for it.</tw-passagedata><tw-passagedata pid="3" name="desk" tags="" position="7,164" size="100,100">The desk seems to badly worn and seems to be clustered with a combination of papers bridged up on some book-type object. You [[go over to the desk]] to inspect it further.</tw-passagedata><tw-passagedata pid="4" name="go over to the desk" tags="" position="10,49" size="100,100">(set: $hasNotebook to 1)
+(set: $notebookRef to [[walk towards door]])
+$notebookRef
+Once you reach the desk, you notice a clutter of papers, you search through them and find your notebook, used to keep all details relating to this case.
+
+[[open notebook]]
+[[walk towards door]] </tw-passagedata><tw-passagedata pid="5" name="walk towards door" tags="" position="528,85" size="100,100">(if: $hasNotebook is 1) [You grasp the dusty door handle and make to [[leave the room]]]
+
+(if: $hasNotebook is 0) [You get out of the bed drowsily, put on some clothes and make your way towards to the door. Noticing that you&#39;ve made to leave without your essential notepad, you [[go over to the desk]] to retrieve it.]</tw-passagedata><tw-passagedata pid="6" name="open notebook" tags="" position="40,398" size="100,100">Opening page of notebook.
+
+[[description]]
+[[list of suspects]]</tw-passagedata><tw-passagedata pid="7" name="go up on deck" tags="" position="586,351" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="8" name="description" tags="" position="10,529" size="100,100">Description of suspects.</tw-passagedata><tw-passagedata pid="9" name="list of suspects" tags="" position="129,526" size="100,100">list of suspects.
+
+[[close notepad-&gt;$notebookRef]]</tw-passagedata><tw-passagedata pid="10" name="leave the room" tags="" position="584,204" size="100,100">You make your way through the hallway and [[go up on deck]]</tw-passagedata><tw-passagedata pid="11" name="Untitled Passage" tags="" position="412,355" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="$notebookRef" tags="" position="129,676" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
