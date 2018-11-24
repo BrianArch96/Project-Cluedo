@@ -13,28 +13,30 @@
 
 <tw-storydata name="alfred_dialog" startnode="1" creator="Twine" creator-version="2.2.1" ifid="BC7C0827-560A-4F87-A793-F1D4B507858F" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
-</script><tw-tag name="startup" color="red"></tw-tag><tw-passagedata pid="1" name="office_1" tags="" position="307,172" size="100,100">	You step into the room, and discover that it is an office whichseems to have been abandoned for a very long time. You find it hard not to notice the flipped table, various items spread across the floor and a biting cold draft coming in from the smashed window.
+</script><tw-tag name="startup" color="red"></tw-tag><tw-passagedata pid="1" name="office_1" tags="" position="307,172" size="100,100">	You step into the room, and discover that it is an office which seems to have been abandoned for a very long time. You find it hard not to notice the flipped table, various items spread across the floor and a biting cold draft coming in from the smashed window.
 
-	You conclude that this is undoubtedly the office where Alfred Jones was murdered all those years ago.
+	You conclude that this is undoubtedly the office where Alfred Jones was murdered all those years ago. It definitely seems like a smash-and-grab attack.
 
 	All of a sudden, you see a shadowy figure emerge from behind the tipped-over office desk. He exclaims:
 	//“You, there. Who are you? What is your business here?”//
 
 	[[Tell him why you are here]]</tw-passagedata><tw-passagedata pid="2" name="Tell him why you are here" tags="" position="306,316" size="100,100">...
-	Ah, so you&#39;re here to solve this mystery once and for all, eh? That is great!
+	//&quot;Ah, so you&#39;re here to solve this mystery once and for all, eh? That is great!
 	
-	Ever since I was murdered by that bastard Edward Shank, my spirit has been stuck on this island. He was held in custody after the murder, but he walked after just a few weeks of trial. The sorry excuse for a judge reckons that there they never found enough &quot;evidence&quot; to prosecute him.
+	I am Alfred Jones. I murdered in this very office years ago.
 	
-	My spirit has been stuck on this earth ever since. I&#39;ve been forced to watch that useless trial unfold, and to watch Shank live into old age as a free man. Even worse, the souls of the others who were residents at the resort at the time of the murder are stuck on this island as well. We&#39;re all prevented from enjoying the afterlife because of the fact that the case was never fully solved, and the culprit was never caught.
+	Ever since I was murdered by that bastard Edward Shank, my spirit has been stuck on this island. He was held in custody after the murder, but he walked free after just a few weeks of trial. The sorry excuse for a judge reckons that there they never found enough &quot;evidence&quot; to prosecute him.
+	
+	My spirit has been stuck on this earth ever since. I&#39;ve been forced to watch that useless trial unfold, and to watch Shank live into old age as a free man. Even worse, the souls of the others who were residents at the resort at the time of the murder are stuck on this island as well. We&#39;re all prevented from enjoying the afterlife because of the fact that the case was never fully solved, and the culprit was never caught.&quot;//
 	
 	//[[&quot;Why do you think it was Edward Shank&quot;]]//
-	//[[&quot;There are other spirits here?&quot;]]//</tw-passagedata><tw-passagedata pid="3" name="&quot;Why do you think it was Edward Shank&quot;" tags="" position="233,449" size="100,100">Was that meant to be a joke? You //do// know about the case right?
+	//[[&quot;There are other spirits here?&quot;]]//</tw-passagedata><tw-passagedata pid="3" name="&quot;Why do you think it was Edward Shank&quot;" tags="" position="233,449" size="100,100">//&quot;Was that meant to be a joke? You do know about the case right?
 
 All the signs point that lispy fool. The jewellery that he stole from the office was found in his room. Not only that, but he had come here to negotiate a possible merger with me. This meeting quickly turned into a heated argument, and he stormed off declaring //&quot;You&#39;ll regret this, Jones&quot;//. I&#39;ve never seen a man so angry. //pfft//, as if I&#39;d give a single percent of this resort to that bald-headed oaf.
 
 Later that night, he snuck into my office like a coward, and killed me where I sat, striking me with my own statue [[right there-&gt;statue]].
 
-I don&#39;t remember the events of the murder, but the evidence clearly points to him.
+I don&#39;t remember the events of the murder, but the evidence clearly points to him.&quot;//
 
 	//[[&quot;There are other spirits here?&quot;]]//
 	[//[[&quot;I will do my best. Thank you&quot;]]//](end_convo|
@@ -44,11 +46,11 @@ I don&#39;t remember the events of the murder, but the evidence clearly points t
 (if: $alfred_q1_asked and $alfred_q2_asked)[
 	(show: ?end_convo)
 ]
-</tw-passagedata><tw-passagedata pid="4" name="&quot;There are other spirits here?&quot;" tags="" position="367,446" size="100,100">Yes, the others who were holidaying here during the time of the murder went on to live their own lives afterwards, but their souls have returned here after their respective lives have ended.
+</tw-passagedata><tw-passagedata pid="4" name="&quot;There are other spirits here?&quot;" tags="" position="367,446" size="100,100">//&quot;Yes, the others who were holidaying here during the time of the murder went on to live their own lives afterwards, but their souls have returned here after their respective lives have ended.
 
 Since Edward was never prosecuted with absolute, undoubtable evidence, none of their names have been cleared of any suspicion. They are effectively stuck here in limbo until they can be proven innocent.
 
-You must help us get to the bottom of this, and hold Edward responsible once and for all.
+You must help us get to the bottom of this, and hold Edward responsible once and for all.&quot;//
 
 	//[[&quot;Why do you think it was Edward Shank&quot;]]//
 	[//[[&quot;I will do my best. Thank you&quot;]]//](end_convo|
