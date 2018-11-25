@@ -11,8 +11,54 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Project Cluedo" startnode="1" creator="Twine" creator-version="2.2.1" ifid="7576BCC8-4CE5-40DD-965B-F3F8A3A40A65" zoom="0.6" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="Project Cluedo" startnode="1" creator="Twine" creator-version="2.2.1" ifid="7576BCC8-4CE5-40DD-965B-F3F8A3A40A65" zoom="0.6" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+tw-story {
+  
+}
 
+tw-story[tags~="notebook"]{
+  background-color: #e9d1af;
+  background-image:
+	
+  linear-gradient(90deg, transparent 71px, #b19977 71px, #b19977 71px, transparent 75px),
+	
+  linear-gradient(#b19977 .1em, transparent .1em);
+  background-size: 100% .9em;
+  color: black;
+  font-family: 'Indie Flower', cursive;
+}
+
+tw-passage{
+	
+}
+
+tw-link{
+	
+}
+
+tw-link.visited{
+	
+}
+
+tw-sidebar{
+	
+}
+
+tw-icon{
+	
+}
+
+tw-icon.undo{
+	
+}
+
+tw-icon.redo{
+	
+}
+
+mark{
+  	
+}
 
 
 
@@ -37,7 +83,9 @@
 
 
 
-</script><tw-passagedata pid="1" name="Start" tags="" position="293,276" size="100,100">You wake up in a dimly lit room on a boat. You&#39;re on your way to an island to inquire about an unsolved murder-mystery that took place fifty years ago. Straight in front of the bed is the [[door]] leading out of the room and to the right of the bed is a [[desk]] cluttered with what seems to papers.
+</script><tw-tag name="notebook" color="purple"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="293,276" size="100,100">You wake up in a dimly lit room on a boat. You&#39;re on your way to an island to inquire about an unsolved murder-mystery that took place fifty years ago. Straight in front of the bed is the [[door]] leading out of the room and to the right of the bed is a [[desk]] cluttered with what seems to papers.
+
+
 
 [[walk towards door]]
 [[go over to the desk]]
@@ -55,14 +103,14 @@ Once you reach the desk, you notice a clutter of papers, you search through them
 [[open notebook]]
 [[walk towards door]] </tw-passagedata><tw-passagedata pid="5" name="walk towards door" tags="" position="528,85" size="100,100">(if: $hasNotebook is 1) [You grasp the dusty door handle and make to [[leave the room]]]
 
-(if: $hasNotebook is 0) [You get out of the bed drowsily, put on some clothes and make your way towards to the door. Noticing that you&#39;ve made to leave without your essential notepad, you [[go over to the desk]] to retrieve it.]</tw-passagedata><tw-passagedata pid="6" name="open notebook" tags="" position="40,398" size="100,100">&#39;&#39;&#39;Notebook index&#39;&#39;&#39;
+(if: $hasNotebook is 0) [You get out of the bed drowsily, put on some clothes and make your way towards to the door. Noticing that you&#39;ve made to leave without your essential notepad, you [[go over to the desk]] to retrieve it.]</tw-passagedata><tw-passagedata pid="6" name="open notebook" tags="notebook" position="40,398" size="100,100">&#39;&#39;&#39;Notebook index&#39;&#39;&#39;
 
 [[Details of Events-&gt;description]]
 (if: $hasMetJeremiah is 1 or $hasMetShane is 1 or $hasMetEdward is 1 or $hasMetWhitworth)[
 [[List of Suspects-&gt;list of suspects]]
 ]</tw-passagedata><tw-passagedata pid="7" name="go up on deck" tags="" position="586,351" size="100,100">The breeze of the sea  is brittle and cuts through you like ice.
 
-You look around the deck and notice the captain to your left, looking off into the distant in thought, you can [[go over to him-&gt; talk to captain]] or go and look to the [[front of the ship]] to see if you can get a glimpse of the island</tw-passagedata><tw-passagedata pid="8" name="description" tags="" position="4,529" size="100,100">1950 was the year that the [[Tomahawk isles-&gt; Tomahawk]] encountered it&#39;s first ever recorded murder.
+You look around the deck and notice the captain to your left, looking off into the distant in thought, you can [[go over to him-&gt; talk to captain]] or go and look to the [[front of the ship]] to see if you can get a glimpse of the island</tw-passagedata><tw-passagedata pid="8" name="description" tags="notebook" position="4,530.6666666666666" size="100,100">1950 was the year that the [[Tomahawk isles-&gt; Tomahawk]] encountered it&#39;s first ever recorded murder.
 [[Alfred Jones-&gt;Alfred]] was brutually murdered on the 21st of February 1950 by an unknown assailant. Jones was a very wealthy man with a number of resorts on the island.
 I&#39;ve been sent by the bureau to investigate the mystery and with any luck solve it.
 
@@ -173,6 +221,7 @@ One of the crew men tap you on the shoulder to tell you that the ship is about t
 The escort shouts back that the resort is no more than five minutes away and you stumble [[towards the resort -&gt; resort entrace]]</tw-passagedata><tw-passagedata pid="41" name=" resort entrace" tags="" position="904,1020" size="100,100">Through the mist, you see the large broad doors of the resort. The fact that they&#39;re worn and broken doesn&#39;t take away from the fact that they were once magnificence.
 The escort shakes you sternly to indicate that you&#39;ll be left to your own devices from now on.
 &quot;The only company you&#39;ll have now are those ghosts you&#39;re so keen to meet.&quot; he whispers in your ear.
+</tw-passagedata><tw-passagedata pid="40" name="Meet Couple" tags="" position="1663,357" size="100,100">You see 2 ghosts, both looking </tw-passagedata></tw-storydata>
 
 His very presence makes your skin crawl as you make way to [[hurry inside the resort -&gt;resort office]], making for the office of the once great [[Alfred]]
 
