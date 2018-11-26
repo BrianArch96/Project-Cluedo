@@ -72,7 +72,11 @@ mark{
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
 
 
 
@@ -97,8 +101,7 @@ mark{
 (set: $hasMetJeremiah to 0)
 (set: $hasMetShane to 0)
 (set: $hasMetWhitworth to 0)
-(set: $talkToCaptain to 0)
-(set: $hasRecivedMap to false)</tw-passagedata><tw-passagedata pid="2" name="door" tags="" position="649,85" size="100,100">From close inspection, the door seems to made of mahogany. It seems well worn out and hasn&#39;t been refurbished in some time. The handle seems to have collected a small layer of dust through lack of usage.
+(set: $talkToCaptain to 0)</tw-passagedata><tw-passagedata pid="2" name="door" tags="" position="649,85" size="100,100">From close inspection, the door seems to made of mahogany. It seems well worn out and hasn&#39;t been refurbished in some time. The handle seems to have collected a small layer of dust through lack of usage.
 
 You notice that you&#39;re missing your notepad and [[go over to the desk]] to search for it.</tw-passagedata><tw-passagedata pid="3" name="desk" tags="" position="12,164" size="100,100">The desk seems to badly worn and seems to be clustered with a combination of papers bridged up on some book-type object. You [[go over to the desk]] to inspect it further.</tw-passagedata><tw-passagedata pid="4" name="go over to the desk" tags="" position="10,49" size="100,100">(set: $hasNotebook to 1)
 
@@ -107,15 +110,11 @@ Once you reach the desk, you notice a clutter of papers, you search through them
 [[open notebook]]
 [[walk towards door]] </tw-passagedata><tw-passagedata pid="5" name="walk towards door" tags="" position="528,85" size="100,100">(if: $hasNotebook is 1) [You grasp the dusty door handle and make to [[leave the room]]]
 
-(if: $hasNotebook is 0) [You get out of the bed drowsily, put on some clothes and make your way towards to the door. Noticing that you&#39;ve made to leave without your essential notepad, you [[go over to the desk]] to retrieve it.]</tw-passagedata><tw-passagedata pid="6" name="open notebook" tags="notebook" position="40,398" size="100,100">&#39;&#39;&#39;Notebook index&#39;&#39;&#39;
+(if: $hasNotebook is 0) [You get out of the bed drowsily, put on some clothes and make your way towards to the door. Noticing that you&#39;ve made to leave without your essential notepad, you [[go over to the desk]] to retrieve it.]</tw-passagedata><tw-passagedata pid="6" name="open notebook" tags="notebook" position="40,394" size="100,100">&#39;&#39;&#39;Notebook index&#39;&#39;&#39;
 
 [[Details of Events-&gt;description]]
 (if: $hasMetJeremiah is 1 or $hasMetShane is 1 or $hasMetEdward is 1 or $hasMetWhitworth)[
 [[List of Suspects-&gt;list of suspects]]
-]
-
-(if: $hasRecivedMap)[
-	[[Map-&gt;map]]
 ]</tw-passagedata><tw-passagedata pid="7" name="go up on deck" tags="" position="586,351" size="100,100">The breeze of the sea  is brittle and cuts through you like ice.
 
 You look around the deck and notice the captain to your left, looking off into the distant in thought, you can [[go over to him-&gt; talk to captain]] or go and look to the [[front of the ship]] to see if you can get a glimpse of the island</tw-passagedata><tw-passagedata pid="8" name="description" tags="notebook" position="4,530" size="100,100">1950 was the year that the [[Tomahawk isles-&gt; Tomahawk]] encountered it&#39;s first ever recorded murder.
@@ -129,7 +128,7 @@ Only time will tell if I&#39;ll be able to solve this mystery, and relieve this 
 The captain has informed you that the resort is home to ghosts, trapped by the unsolved mystery of the &#39;&#39;Alfred Jones&#39;&#39; murder.
 
 He also mentioned that the ghosts are scattered throughout the island but are bound by the island to answer(truthfully or otherwise any questions I may ask in relation to the incident that took place fifty years ago.
-]</tw-passagedata><tw-passagedata pid="9" name="list of suspects" tags="" position="129,527.6666666666666" size="100,100">&#39;&#39;List of Suspects&#39;&#39;
+]</tw-passagedata><tw-passagedata pid="9" name="list of suspects" tags="" position="129,527" size="100,100">&#39;&#39;List of Suspects&#39;&#39;
 (if: $hasMetJeremiah is 1) [
 [[Jeremiah Booth]]
 ]
@@ -198,7 +197,7 @@ Kenny is a bit shorter then Lyla, has dark hair with a few grey hairs throughout
 
 After the murder of [[Alfred Jones-&gt;Alfred]] in 1950, it lost most of it&#39;s resorts to bankruptcy, as most of them were owned by Alfred and went bust. Although, several resorts boomed because of this, most owned by [[Edward Shanks-&gt;edward traits act1]] whom seemed to make a killing(pun intended) off the disaster.
 
-Sadly the island never returned to it&#39;s former glory and to this day, a shadow of despair and mystery daunt the island and the people who inhabit it.</tw-passagedata><tw-passagedata pid="32" name="Alfred" tags="" position="164.66666666666666,405.3333333333333" size="100,100">&#39;&#39;Alfred Jones&#39;&#39;
+Sadly the island never returned to it&#39;s former glory and to this day, a shadow of despair and mystery daunt the island and the people who inhabit it.</tw-passagedata><tw-passagedata pid="32" name="Alfred" tags="" position="164,405" size="100,100">&#39;&#39;Alfred Jones&#39;&#39;
 [[traits-&gt;alfred traits act1]]
 [[looks-&gt;alfred looks act1]]
 </tw-passagedata><tw-passagedata pid="33" name="alfred traits act1" tags="" position="156,179" size="100,100">Alfred was seen by many as a very stingy man who often overworked and underpayed his staff.
@@ -229,8 +228,6 @@ One of the crew men tap you on the shoulder to tell you that the ship is about t
 The escort shouts back that the resort is no more than five minutes away and you stumble [[towards the resort -&gt; resort entrace]]</tw-passagedata><tw-passagedata pid="41" name=" resort entrace" tags="" position="904,1020" size="100,100">Through the mist, you see the large broad doors of the resort. The fact that they&#39;re worn and broken doesn&#39;t take away from the fact that they were once magnificence.
 The escort shakes you sternly to indicate that you&#39;ll be left to your own devices from now on.
 &quot;The only company you&#39;ll have now are those ghosts you&#39;re so keen to meet.&quot; he whispers in your ear.
-
-
 His very presence makes your skin crawl as you make way to [[hurry inside the resort -&gt;resort office]], making for the office of the once great [[Alfred]]
 
 [[Open Notebook -&gt;open notebook]] </tw-passagedata><tw-passagedata pid="42" name="resort office" tags="" position="904,1170" size="100,100">Stumbling into the office, you slam the door behind you as the cold air cuts away at your face.
@@ -288,60 +285,115 @@ Sitting at a the bar, drinking a whiskey on the rocks (however that works for gh
 &#39;&#39;Notebook updated&#39;&#39;
 [[Open Notebook-&gt;open notebook]]</tw-passagedata>
 
-</tw-passagedata><tw-passagedata pid="40" name="meet couple" tags="" position="1572.3333333333333,305" size="100,100">You see 2 ghosts, both arguing over and back but you cant make out what there saying.
+</tw-passagedata><tw-passagedata pid="40" name="couple beach" tags="" position="1567,424" size="100,100">You see 2 ghosts, both arguing over and back but you cant make out what there saying.
 
-[[walk towards ghosts -&gt;couple intro]] </tw-passagedata><tw-passagedata pid="41" name="couple intro" tags="" position="1593.6666666666667,489.6666666666667" size="100,100">You introdouce yourself to them and mention the case of [[Alfred Jones-&gt;Alfred]].
+[[walk towards ghosts -&gt;couple intro]] </tw-passagedata><tw-passagedata pid="41" name="couple intro" tags="" position="1559,583" size="100,100">You introdouce yourself to them and mention the case of [[Alfred Jones-&gt;Alfred]].
+
 &quot;A Journalist! Theres no story here, it was that other resort owner, everyone knows.&quot; shouts the female ghost.
 The male ghost quickly says &quot;Well thats not true, they could never prove anything. That investagation was a sham!&quot;. He then goes on to introduce them. &quot;My name is Kenny Whitworth and this here is my lovely joyous ex-wife, Lyla Whitworth&quot;
 
 [[Where were ye at the time of the murder?-&gt;couple at time of murder]]
 {
 	(set: $hasMetWhitworth to 1)
-}</tw-passagedata><tw-passagedata pid="42" name="couple at time of murder" tags="" position="1437,614.6666666666666" size="100,100">Lyla immediately responds saying &quot;We were both right here! We spent the whole evening trying to enjoy the beach!&quot;
-Kenny then starts to say &quot;The police already asked around and people...&quot; when Lyla buts in &quot;Everyone on this island heard our little argument! This idiot mad esure of that.&quot;
+}</tw-passagedata><tw-passagedata pid="42" name="couple at time of murder" tags="" position="1565,729" size="100,100">Lyla immediately responds saying &quot;We were both right here! We spent the whole evening trying to enjoy the beach!&quot;
+Kenny then starts to say &quot;The police already asked around and people...&quot; when Lyla buts in &quot;Everyone on this island heard our little argument! This idiot made sure of that.&quot;
 
 [[What was the argument about? -&gt; couple argument 1]]
-[[Did ye see anything unusual? -&gt;couple see anything]]
-[[Did ye know the victum? -&gt;couple know victum]]</tw-passagedata><tw-passagedata pid="43" name=" couple argument 1" tags="" position="1330.3333333333333,826.3333333333334" size="100,100">Kenny starts to speak when Lyla says &quot;Oh I can’t wait to hear this!&quot;, Kenny pauses for a second before continuing &quot;Well, it was just one of those normal couple arguments. You know our relationship was not going so well at this time and well as I am sure you know it ended in a divorce.&quot;. Lyla looks angrily amused while he speaks and lets out a very loud &quot;Ha!&quot; as he finishes.
+[[Did ye see anything unusual? -&gt;couple see anything 1]]
+[[Did ye know the victum? -&gt;couple know victum]]</tw-passagedata><tw-passagedata pid="43" name=" couple argument 1" tags="" position="1304.6666666666667,879.3333333333331" size="100,100">Kenny starts to speak when Lyla says &quot;Oh I can’t wait to hear this!&quot;, Kenny pauses for a second before continuing &quot;Well, it was just one of those normal couple arguments. You know our relationship was not going so well at this time and well as I am sure you know it ended in a divorce.&quot;. Lyla looks angrily amused while he speaks and lets out a very loud &quot;Ha!&quot; as he finishes.
 She then starts to explain &quot;Well this small man next to me promised me a relaxing holiday. I was expecting we would be spending this time together but he had other plans!&quot;, Kenny looks annoyed as she continues, &quot;When we get here all of a sudden he keeps wanting to get away from me. Like as if he has something better to do then to spend time with me! So yes I was a little pissed about being left alone on this island. Not exactly the vacation I had planned.&quot;
 
 [[So what did you come here to do Kenny?-&gt;couple argument 2]]
-[[Ask new question-&gt;couple questions]]</tw-passagedata><tw-passagedata pid="44" name="couple see anything" tags="" position="1701.9999999999998,903" size="100,100"></tw-passagedata><tw-passagedata pid="45" name="couple argument 2" tags="" position="1303.6666666666667,999.6666666666666" size="100,100">Kenny says aggressively &quot;I went on walks! You think you could relax with this one next to you?! I just wanted a relaxing holiday like everyone who comes here!&quot;.
+[[So what was Kenny doing when he left you Lyla?-&gt;couple argument 4]]</tw-passagedata><tw-passagedata pid="44" name="couple see anything 1" tags="" position="1575,957.9999999999999" size="100,100">Kenny just shakes his head and says &quot;Just sand and water, thats all there is at a beach&quot;.
+Lyla says &quot;Not like you were even paying attention to anything!&quot;
+
+[[So Kenny what were you focused on?-&gt;couple see anything 2]]
+[[Just sand? Was there no one else here that evening?-&gt;couple see anything 3]]</tw-passagedata><tw-passagedata pid="45" name="couple argument 2" tags="" position="1298.6666666666667,1010.6666666666666" size="100,100">Kenny says aggressively &quot;I went on walks! You think you could relax with this one next to you?! I just wanted a relaxing holiday like everyone who comes here!&quot;.
 Lyla rolls her eyes but seems to stop herself saying anything.
 
 [[Where did these walk bring you Kenny? -&gt;couple argument 3]]
-[[Lyla what do you think he was here to do? -&gt;couple argument 4]]
-[[Ask new question-&gt;couple questions]]</tw-passagedata><tw-passagedata pid="46" name="couple know victum" tags="" position="1903.6666666666665,816.3333333333334" size="100,100">Lyla says &quot;I dont know Kenny, did you know [[Alfred Jones-&gt;Alfred]]?!&quot;
+[[Lyla what do you think he was here to do? -&gt;couple argument 4]]</tw-passagedata><tw-passagedata pid="46" name="couple know victum" tags="" position="2072,1077.3333333333333" size="100,100">Lyla says &quot;I dont know Kenny, did you know [[Alfred Jones-&gt;Alfred]]?!&quot;
 Kenny responds to her &quot;Ha, no of corse not! What are you tring to say? All I knew about him is that he owned this place. Never meet the man.&quot;
 
-[[Ask new question-&gt;couple questions]]</tw-passagedata><tw-passagedata pid="47" name="couple argument 3" tags="" position="1403.6666666666665,1154.6666666666665" size="100,100">Kenny says &quot;Well I would walk all over really, the beach, the docks or the garden. Really anywhere I could get away from her.&quot; Lyla scowls at him.
+[[Ask new question-&gt;couple questions]]</tw-passagedata><tw-passagedata pid="47" name="couple argument 3" tags="" position="1304.6666666666667,1127.6666666666665" size="100,100">Kenny says &quot;Well I would walk all over really, the beach, the docks or the garden. Really anywhere I could get away from her.&quot; Lyla scowls at him.
 
 [[Lyla what do you think he was here to do? -&gt;couple argument 4]]
-[[Ask new question-&gt;couple questions]]</tw-passagedata><tw-passagedata pid="48" name="couple argument 4" tags="" position="1203.6666666666665,1156.3333333333337" size="100,100">Lyla has to think about it but then says &quot;He was probably cheating on me with one of the massagers up at the spa!&quot;.
+[[Did you happen to go on one of these walks at that evening at the beach?-&gt;couple argument 5]]</tw-passagedata><tw-passagedata pid="48" name="couple argument 4" tags="" position="1130.3333333333335,1081.3333333333333" size="100,100">Lyla has to think about it but then says &quot;He was probably cheating on me with one of the massagers up at the spa!&quot;.
 Kenny says &quot;I was not and would not. You know I was just going for walks now let’s leave it there.&quot;
 
-It does not seem like they’re going to talk about their argument much more but it seems like there also holding something back.
+[[Did you happen to go on one of these walks at that evening at the beach?-&gt;couple argument 5]]
+[[So Lyla you never followed him to see what he was doing?-&gt;couple argument 7]]</tw-passagedata><tw-passagedata pid="49" name="couple questions" tags="" position="2013,698" size="100,100">[[What was the argument about? -&gt; couple argument 1]]
+[[Did ye see anything unusual? -&gt;couple see anything 1]]
+[[Did ye know the victum? -&gt;couple know victum]]</tw-passagedata><tw-passagedata pid="50" name="couple argument 5" tags="" position="1306.6666666666667,1273.6666666666665" size="100,100">Kenny gets a little flustered &quot;No no no, I stayed right here!&quot;
 
-[[Ask new question-&gt;couple questions]]</tw-passagedata><tw-passagedata pid="49" name="couple questions" tags="" position="1794.9999999999998,498.3333333333332" size="100,100">[[What was the argument about? -&gt; couple argument 1]]
-[[Did ye see anything unusual? -&gt;couple see anything]]
-[[Did ye know the victum? -&gt;couple know victum]]</tw-passagedata><tw-passagedata pid="50" name="map" tags="" position="2433.3333333333335,449.99999999999994" size="100,100">A map of the resort. Should help you get around.
-
-[[Go to Beach-&gt;beach]]
-[[Go to Dock-&gt;dock]]
-[[Go to Alfreds office-&gt;alfreds office]]
-[[Go to Garden-&gt;garden]]
-[[Go to Pool-&gt;pool]]
-[[Go to Spa-&gt;spa]]</tw-passagedata><tw-passagedata pid="51" name="beach" tags="beach" position="2186.6666666666674,468.3333333333333" size="100,100">The beach is very long and surounds most of the island. Alot of the rooms of the resort are looking out over parts of the beach but there are some secluded sections. Even in its empty unkept state you can imagine it when its full of people. The beach still holds alot of its natural beuaty.
+[[But you did say you went on walks to get away from Lyla and that night ye had an argument so it seems like something you might do.-&gt;couple argument 6]]
+{
+(set: $askKennyAboutWalkingThatDay to true)
+}</tw-passagedata><tw-passagedata pid="51" name="couple argument 6" tags="" position="1316.3333333333335,1504.3333333333333" size="100,100">Lyla says with a smerk &quot;You know as a matter of fact, Ya! Maybe he did go for one of his little walks hes so fond of that evening!&quot;. As shes speaking you can see that Kenny is getting very nervious and agatated. He then says back &quot;Shut up you old fool, you know thats not true and you are just spitefull. Just remember what he goes back and writes about me also reflects badly on you and our kids! Think of them and tell him your lieing!!&quot;. Lyla looses her smerk at the thought of her kids. She then mutters in a soft tone &quot;Ya I was just kidding, he was with me the whole day.&quot;.
+It seems like they both really care about there kids and what they will think when you write about them as part of this investagation.
 
 {
-  (if: $hasMetWhitworth is 1)[
-  [[Go to Whitworths-&gt;couple questions]]
-  ]
-  (else:)[
-  You see 2 ghost at one end.
-  [[Go ghosts-&gt;meet couple]]
-  ]
-}</tw-passagedata><tw-passagedata pid="52" name="dock" tags="" position="2518.333333333334,683.3333333333333" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="53" name="alfreds office" tags="" position="2636.666666666667,293.33333333333326" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="54" name="garden" tags="" position="2291.666666666667,268.33333333333326" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="55" name="pool" tags="" position="2331.6666666666674,665" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="56" name="spa" tags="" position="2695.0000000000005,558.3333333333333" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+(if: $askLylaAboutFollowingKenny is true)[
+It seems like you got the whole story.
+[[Ask new question-&gt;couple questions]]
+]
+(else:)[
+[[So anyway, Lyla you never followed him to see what he was doing?-&gt;couple argument 7]]
+]
+}
+</tw-passagedata><tw-passagedata pid="52" name="couple argument 7" tags="" position="919.6666666666665,1087.6666666666665" size="100,100">It seems like you hurt Lyla&#39;s pride. She says &quot;Well I did think of following him to see where he went but I just did not care. I was here to relax so I did.&quot;. 
+
+[[But if you did not care then why were you so angry?-&gt;couple argument 8]]
+
+{
+(set: $askLylaAboutFollowingKenny to true)
+}</tw-passagedata><tw-passagedata pid="53" name="couple argument 8" tags="" position="923.3333333333333,1234.6666666666665" size="100,100">Lyla gets angry and blurts out &quot;I dont care! I am angry because this fool was loosing his job!&quot;. Kenny looks sad.
+The investagation never mentioned Kenny knowing he was being let go before they went on vacation. Seems like a key piece of information.
+
+[[So Kenny you were loosing your job?-&gt;couple argument 9]]
+[[So ye knew about Kenny being let go before ye went on this trip?-&gt;couple argument 10]]</tw-passagedata><tw-passagedata pid="54" name="couple argument 9" tags="" position="828.3333333333331,1368.9999999999998" size="100,100">Kenny says &quot;Well ya as I am sure you know I was let go as CEO of Whithworths. It was a family busness and it was suposed to be passed on to my kids like it was passed onto me. But those idiots thought I was the reason for the sales.&quot;. He looks very sad and defeated as he says this.
+Lyla almost looks sympathetic for a moment but then snaps back to being aggressive and says &quot;It was your own foolish actions that lost us everything!&quot;
+
+[[Ye both seemed pretty financially stable after the divorce.-&gt;couple argument 11]]</tw-passagedata><tw-passagedata pid="55" name="couple argument 10" tags="" position="1045.0000000000002,1369.333333333333" size="100,100">Kenny says &quot;Well yes I knew but I let it slip while here. Thats why I was going for walks, I was too stressed. When I let it slip thats when the arguments started&quot; but Lyla adds &quot;I would of never been so stupid with our money if I knew about the financial struggles that would be ahead.&quot;
+
+[[Ye both seemed pretty financially stable after the divorce.-&gt;couple argument 11]]
+[[So why book this expensive vacation if you knew you were loosing your job Kenny?-&gt;couple argument 12]]</tw-passagedata><tw-passagedata pid="56" name="couple argument 11" tags="" position="925,1504.6666666666665" size="100,100">Lyla shouts &quot;You dont know what yor talking about!&quot; and Kenny chimes in quite fast with &quot;Well I was able to call in a few favours and get back on my feet pretty fast. So we ended up ok&quot;. They clearly dont like to talk about money.
+[[So why book this expensive vacation if you knew you were loosing your jon Kenny?-&gt;couple argument 12]]</tw-passagedata><tw-passagedata pid="57" name="couple argument 12" tags="" position="1145.0000000000002,1504.333333333333" size="100,100">Kenny seems very nervious while Lyla scouls at him and says sarcastically &quot;Hmmmm ya very good question. Why would someone do something so stupid like that?&quot; and then she looks directly at Kenny.
+Kenny responds with &quot;Well I wanted to have one last good memory for us, I wanted to treat Lyla before she found out.&quot;.
+Lyla laught and says extreamly sarcastically &quot;Ohhh ya this was one of my fondest memories, I am so glad I get to be stuck in it for the rest of ethernity with you!!&quot;.
+
+{
+(if: $askKennyAboutWalkingThatDay is true)[
+It seems like you got the whole story.
+[[Ask new question-&gt;couple questions]]
+]
+(else:)[
+[[So anyway, Kenny did you happen to go on one of these walks at that evening at the beach?-&gt;couple argument 5]]
+]
+}</tw-passagedata><tw-passagedata pid="58" name="couple see anything 2" tags="" position="1553.3333333333333,1097.9999999999998" size="100,100">Lyla scouls and says &quot;Propaly all the other women in there bikinis walking up and down the beach! It was not me anyway.&quot;.
+{
+(set: $lylaSeenPeople to true)
+(if: $kennySeenNoPeople is true)[
+	[[But Kenny just said ye were in an excluded area and did not see much people?-&gt;couple see anything 4]]
+]
+(else:)[
+	[[So Kenny all you saw were women?-&gt;couple see anything 3]]
+]
+}
+</tw-passagedata><tw-passagedata pid="59" name="couple see anything 3" tags="" position="1706.6666666666667,1096.333333333333" size="100,100">Kenny laughs and says &quot;Of course the beach was always full of people, but we did not notice anything unusual because we were down at this end, its a little it more excluded so we did not see anyone for most of the evening.&quot;.
+{
+(set: $kennySeenNoPeople to true)
+(if: $lylaSeenPeople is true)[
+	[[But Lyla just said she seen alot of women walk past. No one reported seeing ye?-&gt;couple see anything 4]]
+]
+(else:)[
+	[[So Lyla, Kenny was just ignoring you?-&gt;couple see anything 2]]
+]
+}</tw-passagedata><tw-passagedata pid="60" name="couple see anything 4" tags="" position="1814.9999999999998,1292.9999999999998" size="100,100">Kenny gets frustrated and says &quot;We were in an excluded...&quot; but is intrupted by Lyla who says &quot;Well we did not see anyone while we were here but on our walk down thats all he was looking at!! While we were here thats all that was on his mind is what I meant!!&quot;. Kenny adds &quot;I was not thinking of other women but she is correct about us being alone! No one came down to this section.&quot;. Lyla looks annoyed at his response and says &quot;Pffft, ya sure.&quot;.
+
+Seems like they did not see anything but they also seem to be hiding something.
+
+[[Ask new question-&gt;couple questions]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
