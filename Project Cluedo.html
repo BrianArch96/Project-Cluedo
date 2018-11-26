@@ -158,8 +158,7 @@ He also mentioned that the ghosts are scattered throughout the island but are bo
 [[traits-&gt;jeremiah traits act1]]
 [[looks-&gt;jeremiah looks act1]]
 [[motive-&gt;jeremiah motive act1]]
-[[alibi-&gt;jeremiah alibi act1]]
-(set: $jeremiahOpinion to 0)</tw-passagedata><tw-passagedata pid="14" name="edward traits act1" tags="" position="0,821" size="100,100">Edward J. Shanks was an owner of a chain of resorts across the country dating back to the 1950s.
+[[alibi-&gt;jeremiah alibi act1]]</tw-passagedata><tw-passagedata pid="14" name="edward traits act1" tags="" position="0,821" size="100,100">Edward J. Shanks was an owner of a chain of resorts across the country dating back to the 1950s.
 
 He was visiting [[Alfred]] at the time of the murder in relation to a possible merger, something out of character when one takes into account the nature of their relationship.
 
@@ -287,7 +286,7 @@ Jeremiah says in a dissapointed tone you think it&#39;s because he of no more he
 (set: $hasMetJeremiah to 0)
 (set: $hasMetShane to 0)
 (set: $hasMetWhitworth to 0)
-(set: $talkToCaptain to 0)</tw-passagedata><tw-passagedata pid="50" name="question Edward" tags="" position="734,1689" size="100,100">&quot;So you want to know if it was me, do you...?&quot; he says, for what seems to be his one-thousanth time.
+(set: $talkToCaptain to 0)</tw-passagedata><tw-passagedata pid="50" name="question Edward" tags="" position="715.6666666666666,1722.3333333333333" size="100,100">&quot;So you want to know if it was me, do you...?&quot; he says, for what seems to be his one-thousanth time.
 
 &quot;I know everyone seems me as this terrifying man, and don&#39;t get me wrong, I was!&quot; he laughs &quot;but I did not kill that man, although I did despise him greatly.&quot;
 
@@ -432,20 +431,21 @@ Seems like they did not know him.
 
 [[Ask new question-&gt;couple questions]]</tw-passagedata><tw-passagedata pid="76" name="Startup" tags="startup" position="1366,106" size="100,100">(set: $askLylaAboutFollowingKenny to false)
 (set: $askLylaAboutFollowingKenny to false)
-(set: $askKennyAboutWalkingThatDay to false)</tw-passagedata><tw-passagedata pid="77" name="question Jeremiah" tags="" position="1329,1473" size="100,100">[[Mr booth is it? I’ve got a couple questions I’d like to ask you if that&#39;s alright?-&gt; Booth Answer1]]
+(set: $askKennyAboutWalkingThatDay to false)
+(set: $jeremiahOpinion to false)</tw-passagedata><tw-passagedata pid="77" name="question Jeremiah" tags="" position="1329,1473" size="100,100">[[Mr booth is it? I’ve got a couple questions I’d like to ask you if that&#39;s alright?-&gt; Booth Answer1]]
 
-[[You never submitted an alibi on the night of the murder yet you weren’t the prime suspect, can you explain this? Why didn’t you submit one?-&gt;Booth Answer2]]</tw-passagedata><tw-passagedata pid="78" name=" Booth Answer1" tags="" position="1471.6666666666667,1466.3333333333333" size="100,100">jeremiah: Oh, hello there that is me correct. You must be another reporter, I’ve seen quite a few of you over the years not much has come from it but I will oblige to help you in what you need.
+[[You never submitted an alibi on the night of the murder yet you weren’t the prime suspect, can you explain this? Why didn’t you submit one?-&gt;Booth Answer2]]</tw-passagedata><tw-passagedata pid="78" name=" Booth Answer1" tags="" position="1508.3333333333335,1456.3333333333333" size="100,100">jeremiah: Oh, hello there that is me correct. You must be another reporter, I’ve seen quite a few of you over the years not much has come from it but I will oblige to help you in what you need.
 
 [[I was wondering if you could point me in the right direction, why was it that your alibi wasn’t documented in the case?-&gt;Booth Answer2]]
-(set: $jeremiahOpinion to 1)</tw-passagedata><tw-passagedata pid="79" name="Booth Answer2" tags="" position="1634.6666666666667,1604" size="100,100">jeremiah: I was watering the plants in the garden that is hardly an alibi worth mentioning, I was eliminated as a suspect from lack of evidence targeting me.
+(set: $jeremiahOpinion to true)</tw-passagedata><tw-passagedata pid="79" name="Booth Answer2" tags="" position="1634.6666666666667,1604" size="100,100">jeremiah: I was watering the plants in the garden that is hardly an alibi worth mentioning, I was eliminated as a suspect from lack of evidence targeting me.
 
-(if: $jeremiahOpinion is 1)[[[Player: That’s it? Fair enough I suppose that wouldn’t hold up in court anyways.-&gt; Booth Answer3]]]
+(if: $jeremiahOpinion is true)[[[Player: That’s it? Fair enough I suppose that wouldn’t hold up in court anyways.-&gt; Booth Answer3]]]
 
-(if: $jeremiahOpinion is 0)[[[Player: That is all you seen on the night? surely a man of your position hears and sees throught the walls of this place? tell me what happened-&gt; Booth Answer4]]]</tw-passagedata><tw-passagedata pid="80" name=" Booth Answer3" tags="" position="1808.3333333333333,1606" size="100,100">jeremiah: Actually I’m not usually the person to do this but you seem like you want to make a change in this place. On the night of the murder, I caught a couple in the restricted area of the garden.
+(if: $jeremiahOpinion is false)[[[Player: That is all you seen on the night? surely a man of your position hears and sees throught the walls of this place? tell me what happened-&gt; Booth Answer4]]]</tw-passagedata><tw-passagedata pid="80" name=" Booth Answer3" tags="" position="1808.3333333333333,1606" size="100,100">jeremiah: Actually I’m not usually the person to do this but you seem like you want to make a change in this place. On the night of the murder, I caught a couple in the restricted area of the garden.
 
 I didn’t follow up on it all those years ago as I thought nothing of it. People sneak around this place all the time, I think they might of been suspects it the case.. I hope that gives you something to work with.
 
-(set: $hasMetJeremiah to 1)
+(set: $hasMetJeremiah to true)
 
 [[Return to reception-&gt;reception]]
 &#39;&#39;Notebook updated&#39;&#39;
