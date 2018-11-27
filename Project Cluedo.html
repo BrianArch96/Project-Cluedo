@@ -271,9 +271,11 @@ Sitting at a the bar, drinking a whiskey on the rocks (however that works for gh
 [[Return to reception-&gt;reception]] 
 ]
 [[Open Notebook-&gt;open notebook]] </tw-passagedata><tw-passagedata pid="47" name="benches" tags="" position="1054,1470" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="48" name=" garden" tags="" position="1184,1469" size="100,100">(if: $hasMetJeremiah is 0)
-[&quot;*Off in the corner of the garden stands an aged man in a grey jumpsuit. You can tell just from his posture that he’s been through a lot in his life, and probably worked hard to get what he wanted in life.
+[*Years since this island has had anyone to maintain it, the garden still appears as a beautiful meadow. Flowers are blooming and fruit is ripening on the trees.The morning dew still on the tips of the weedgrass.
 
-I assume this is the resort janitor Jeremiah Booth..*
+Off in the corner of the garden stands an aged man in a grey jumpsuit. You can tell just from his posture that he’s been through a lot in his life, and probably worked hard to get what he wanted in life.*
+
+I assume this is the resort janitor Jeremiah Booth..
 
 [[Maybe he could answer a question or two on the current situation.-&gt;question Jeremiah]]]
 
@@ -455,12 +457,13 @@ I didn’t follow up on it all those years ago as I thought nothing of it. Peopl
 &#39;&#39;Notebook updated&#39;&#39;
 [[Open Notebook-&gt;open notebook]]</tw-passagedata><tw-passagedata pid="81" name=" Booth Answer4" tags="" position="1833,1815" size="100,100">jeremiah: Yeah I did see something that night but it wasn&#39;t a big deal..
 
-[[tell me!-&gt; Booth Answer5]]</tw-passagedata><tw-passagedata pid="82" name=" Booth Answer5" tags="" position="1821,1576.3333333333333" size="100,100">jeremiah: Okay okay I&#39;ll tell you what you want but just stop harrasing me?
+[[tell me!-&gt; Booth Answer5]]</tw-passagedata><tw-passagedata pid="82" name=" Booth Answer5" tags="" position="1684.3333333333333,1531.3333333333333" size="100,100">jeremiah: Okay okay I&#39;ll tell you what you want but just stop harrasing me?
 
 On the night of the murder, I caught a couple in the restricted area of the garden. That was it.  I didn&#39;t report it because this happens all the time but if you think that&#39;s worth your time there you go now leave me alone. Please!
 
 (set: $hasMetJeremiah to 1)
 
+[[Your motives as specified in the case brief say that you had a great hatred for Albert can you explain yourself?-&gt;Booth Answer8]]
 [[Return to reception-&gt;reception]]
 &#39;&#39;Notebook updated&#39;&#39;
 [[Open Notebook-&gt;open notebook]]</tw-passagedata><tw-passagedata pid="83" name="Booth Answer6" tags="" position="1288,1940.9999999999998" size="100,100">jeremiah: Don&#39;t get me wrong in my opinion, Alfred was a bad person but people exaggerated over how they were treated here at the resort.
@@ -471,7 +474,13 @@ Don&#39;t you think I would have left and not stayed all these years?
 
 Your generation has it much easier now
 
-[[I&#39;m sorry-&gt;question Jeremiah]]</tw-passagedata></tw-storydata>
+(set: $jeremiahOpinion to false)
+
+[[I&#39;m sorry-&gt; Booth Answer1]]</tw-passagedata><tw-passagedata pid="85" name="Booth Answer8" tags="" position="1734.3333333333333,1368.3333333333335" size="100,100">jeremiah: That was all lies, I never hated the man enough to kill him! Yes he mistreated his staff, yes people have quit in the past due to how he was with them but did he deserve to die? that&#39;s gods decision to make not mine.
+
+*You can see genuine anger in jeremiahs eye&#39;s. Is it the type of anger that could kill a man? Or has he been tormented all these years after the murder by those accusations as an innocent man..*
+
+[[Goodbye Mr. Booth I&#39;ll be keeping in touch.-&gt;reception]]</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
