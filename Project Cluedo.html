@@ -84,6 +84,7 @@ mark{
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -99,6 +100,7 @@ mark{
 
 
     
+
 
 
 
@@ -195,7 +197,9 @@ He doesn&#39;t concern himself with the other ghosts.</tw-passagedata><tw-passag
 
 He has been the longest lasting employee of Alfred as many people come and go over time from usually finding better paying jobs or unable to be worked so hard. 
 
-In Jeremiahs position, people tend to talk about private topics and forget that he is even there. Perhaps he knows a thing or two about the others that he has overheard from their private conversations.</tw-passagedata><tw-passagedata pid="23" name="jeremiah looks act1" tags="" position="377,916" size="100,100">There is much to do for a singular janitor in order to maintain a resort, you can see that jeremiah has been drained over the years of work. It’s not an easy job, but you can see that he has put a lot of work into this place.</tw-passagedata><tw-passagedata pid="24" name="jeremiah motive act1" tags="" position="381,1051" size="100,100">There has been reports that [[Alfred]] wrongfully underpaid his employees. Maybe after so many years working for Alfred and not getting a single raise jeremiah had enough.
+In Jeremiahs position, people tend to talk about private topics and forget that he is even there. Perhaps he knows a thing or two about the others that he has overheard from their private conversations.</tw-passagedata><tw-passagedata pid="23" name="jeremiah looks act1" tags="" position="377,916" size="100,100">jeremiah is a dark skinned aged man. Living the 50&#39;s must of been tough for a man in his position working here back then equality wasn&#39;t a thing for all races..
+
+There is much to do for a singular janitor in order to maintain a resort, you can see that jeremiah has been drained over the years of work. It’s not an easy job, but you can see that he has put a lot of work into this place.</tw-passagedata><tw-passagedata pid="24" name="jeremiah motive act1" tags="" position="381,1051" size="100,100">There has been reports that [[Alfred]] wrongfully underpaid his employees. Maybe after so many years working for Alfred and not getting a single raise jeremiah had enough.
 
 He had put so much work into the resort over the last 6 years and was never shown gratitude for what he done, perhaps he seen an opportunity to grab the money from Alfred and leave but something must not have went as planned and that’s why the improvised weapon was used to kill Alfred .</tw-passagedata><tw-passagedata pid="25" name="jeremiah alibi act1" tags="" position="498,1050" size="100,100">From reviewing the court case, it seems jeremiah didn&#39;t present an alibi.
 
@@ -473,23 +477,25 @@ Seems like they did not know him.
 [[I was wondering if you could point me in the right direction, why was it that your alibi wasn’t documented in the case?-&gt;Booth Answer2]]
 
 [[What was your relation to the murder victim Alfred? I heard he was not the greatest of people when it came to treating his employees-&gt;Booth Answer6]]
-(set: $jeremiahOpinion to true)</tw-passagedata><tw-passagedata pid="78" name="Booth Answer2" tags="" position="1828,2576" size="100,100">jeremiah: I was watering the plants in the garden that is hardly an alibi worth mentioning, I was eliminated as a suspect from lack of evidence targeting me.
+(set: $jeremiahOpinion to true)</tw-passagedata><tw-passagedata pid="78" name="Booth Answer2" tags="" position="1828,2576" size="100,100">jeremiah: I was up on the balcony, that&#39;s where I like to go for some peace and quite.
 
-(if: $jeremiahOpinion is true)[[[Player: That’s it? Fair enough I suppose that wouldn’t hold up in court anyways.-&gt; Booth Answer3]]]
+(if: $jeremiahOpinion is true)[[[That’s it? Fair enough I suppose that wouldn’t hold up in court anyways.-&gt; Booth Answer3]]]
 
-(if: $jeremiahOpinion is false)[[[Player: That is all you seen on the night? surely a man of your position hears and sees throught the walls of this place? tell me what happened-&gt; Booth Answer4]]]</tw-passagedata><tw-passagedata pid="79" name=" Booth Answer3" tags="" position="1772,2705" size="100,100">jeremiah: Actually I’m not usually the person to do this but you seem like you want to make a change in this place. On the night of the murder, I caught a couple in the restricted area of the garden.
+(if: $jeremiahOpinion is false)[[[Player: That is all you seen on the night? surely a man of your position hears and sees throught the walls of this place? tell me what happened-&gt; Booth Answer4]]]
+</tw-passagedata><tw-passagedata pid="79" name=" Booth Answer3" tags="" position="1772,2705" size="100,100">jeremiah: Actually I’m not usually the person to do this but you seem like you want to make a change in this place. On the night of the murder, on that night Edward Shank.. as you probably know the prime suspect &amp; I shared a smoke up on that balcony.
 
-I didn’t follow up on it all those years ago as I thought nothing of it. People sneak around this place all the time, I think they might of been suspects it the case.. I hope that gives you something to work with.
+I gave that information to the police but they wouldn&#39;t listen, it seemed as if they had some sort of hidden agenda. I hope that gives you something to work with don&#39;t trust everying you see in the reports kid.
 
 (set: $hasMetJeremiah to 1)
 
 [[Return to reception-&gt;reception]]
 &#39;&#39;Notebook updated&#39;&#39;
-[[Open Notebook-&gt;open notebook]]</tw-passagedata><tw-passagedata pid="80" name=" Booth Answer4" tags="" position="1891,2701" size="100,100">jeremiah: Yeah I did see something that night but it wasn&#39;t a big deal..
+[[Open Notebook-&gt;open notebook]]
+</tw-passagedata><tw-passagedata pid="80" name=" Booth Answer4" tags="" position="1891,2701" size="100,100">jeremiah: Yeah I did see something that night but it wasn&#39;t a big deal the cops didn&#39;t believe me and neither would you..
 
 [[tell me!-&gt; Booth Answer5]]</tw-passagedata><tw-passagedata pid="81" name=" Booth Answer5" tags="" position="1975,2834" size="100,100">jeremiah: Okay okay I&#39;ll tell you what you want but just stop harrasing me?
 
-On the night of the murder, I caught a couple in the restricted area of the garden. That was it.  I didn&#39;t report it because this happens all the time but if you think that&#39;s worth your time there you go now leave me alone. Please!
+On the night of the murder, I was with the main suspect Edward Shank, we shared a cigerette on the balcony above the garden, I told the cops about this already but you wont find it in the reports, they didn&#39;t believe me. That was it. If you think that&#39;s worth your time there you go now leave me alone. Please!
 
 (set: $hasMetJeremiah to 1)
 
@@ -602,7 +608,7 @@ You ask him how he got it and he tells you it&#39;s the way in which he died.
 
 You notice Lyla start to sob uncontrolably, the tension on the room has gotten considerably thicker.
 
-[[Press forward with proseuction]]</tw-passagedata><tw-passagedata pid="98" name="Press forward with proseuction" tags="" position="1658.3333333333333,244" size="100,100">Suddenly a mist in the room starts to appear, similar to that which has taken the island.
+[[Press forward with proseuction]]</tw-passagedata><tw-passagedata pid="98" name="Press forward with proseuction" tags="" position="1658,244" size="100,100">Suddenly a mist in the room starts to appear, similar to that which has taken the island.
 
 It slowely starts to cover the fragile figures of the ghosts, you stare at the figures as they&#39;re absorbed by the mist.
 
@@ -624,7 +630,7 @@ The captain greets you and ushers you onto the boat.
 
 &quot;Come on, let&#39;s get you something to eat.&quot;
 
-THE END</tw-passagedata><tw-passagedata pid="101" name="press couple for more" tags="" position="2520,2378.333333333333" size="100,100">Lyla looks horrified at the thought of you accusing her and says{
+THE END</tw-passagedata><tw-passagedata pid="101" name="press couple for more" tags="" position="2520,2378" size="100,100">Lyla looks horrified at the thought of you accusing her and says{
 (if: $pressedJason is true)[
  &quot;We have told you all we know, you would be stupid to think it was us! He is the one who murdered Alfrid!! Hes a lier!!&quot;,
 ]
@@ -634,18 +640,18 @@ THE END</tw-passagedata><tw-passagedata pid="101" name="press couple for more" t
 } Kenny looks defeated and mutters“Maybe we should just tell them Lyla..”. Lyla shouts “Are you stupid, we had nothing to do with ...” but Kenny buts in with “They all think its us anyway”. There&#39;s a pause. Everyone has a look of shock and happiness on there faces. Then Kenny reluctantly says “We were stealing the hidden gold in the garden. We had heard of it before and I was going too dig it up and steal it. That&#39;s where we were at the time.” Everyone loses the look of happiness when they realize he was not confessing. Lyla and Kenny look ashamed.
 
 [[So how did you know about this?-&gt;press couple 2]]
-[[So that&#39;s why you were leaving Lyla?-&gt;press couple 3]]</tw-passagedata><tw-passagedata pid="102" name="who to press for more" tags="" position="2613.333333333333,1938.3333333333333" size="100,100">[[Lyla and Kenny, yere alabi can not really be proven. Ye say ye were at the beach but also that Kenny kept walking off. What are ye hiding from us?-&gt;press couple for more]]
+[[So that&#39;s why you were leaving Lyla?-&gt;press couple 3]]</tw-passagedata><tw-passagedata pid="102" name="who to press for more" tags="" position="2613,1938" size="100,100">[[Lyla and Kenny, yere alabi can not really be proven. Ye say ye were at the beach but also that Kenny kept walking off. What are ye hiding from us?-&gt;press couple for more]]
 [[Jason you don&#39;t even have an alibi, no one saw you! What are you hiding?-&gt;press jason for more]]</tw-passagedata><tw-passagedata pid="103" name="press jason for more" tags="" position="2790,1980" size="100,100">Jason starts to get flustered and says &quot;Me? I had nothing to do with any of this!! I don&#39;t even know why I am here!&quot;.
 
-[[Well if it was not you then who!?-&gt;press jason for more 2]]</tw-passagedata><tw-passagedata pid="104" name="press couple 2" tags="" position="2403.3333333333335,2563.333333333333" size="100,100">Kenny says &quot;It was a rumor I had heard of. I was not sure it would actually be here but the rumor says that Alfred hid a “Rainy day” stash of gold for a time when he might need to flee. The rumor  tells of it being buried under a berry bush. I walked all over this island looking under every berry bush.&quot; Lyla interrupts saying angrily “Ya I noticed!!&quot;.
+[[Well if it was not you then who!?-&gt;press jason for more 2]]</tw-passagedata><tw-passagedata pid="104" name="press couple 2" tags="" position="2403,2563" size="100,100">Kenny says &quot;It was a rumor I had heard of. I was not sure it would actually be here but the rumor says that Alfred hid a “Rainy day” stash of gold for a time when he might need to flee. The rumor  tells of it being buried under a berry bush. I walked all over this island looking under every berry bush.&quot; Lyla interrupts saying angrily “Ya I noticed!!&quot;.
 
 [[So that&#39;s why you were leaving Lyla?-&gt;press couple 3]]
 [[So how did you find it Kenny?-&gt;press couple 4]]
-</tw-passagedata><tw-passagedata pid="105" name="press couple 3" tags="" position="2643.3333333333335,2553.333333333333" size="100,100">Lyla says &quot;Yes! And for the record I had nothing to do with his stealing!! I only found out by following him so I had nothing to do with any of this!&quot; but then Kenny says &quot;Bullshit! You did not know at the time but you had no problem talking the money in the divorce. The money I stole from this very island!!&quot;. Lyla looks so frustrated and shouts “I had nothing to do with how you got that money that&#39;s on you!! I was thinking of our kids!”. Kenny smirks angrily saying &quot;We all know who you were thinking of!&quot;. Lyla looks disappointed in herself, seems like she regrets taking the money.
+</tw-passagedata><tw-passagedata pid="105" name="press couple 3" tags="" position="2643,2553" size="100,100">Lyla says &quot;Yes! And for the record I had nothing to do with his stealing!! I only found out by following him so I had nothing to do with any of this!&quot; but then Kenny says &quot;Bullshit! You did not know at the time but you had no problem talking the money in the divorce. The money I stole from this very island!!&quot;. Lyla looks so frustrated and shouts “I had nothing to do with how you got that money that&#39;s on you!! I was thinking of our kids!”. Kenny smirks angrily saying &quot;We all know who you were thinking of!&quot;. Lyla looks disappointed in herself, seems like she regrets taking the money.
 
 [[So how did you know about this?-&gt;press couple 2]]
 [[So how did you find it Kenny?-&gt;press couple 4]]
-</tw-passagedata><tw-passagedata pid="106" name="press couple 4" tags="" position="2403.3333333333335,2699.9999999999995" size="100,100">Kenny says &quot;I was starting to give up on finding it and with this one breathing down my neck I was thinking of just giving up” and Lyla mumbles &quot;Like you give up on everything.&quot;. Kenny gives her a look but continues &quot;I happened to see a small berry bush at the very back of the garden. It was the only one there. So when the place was a little less active I made my way over and got the gold. I stole from Alfrid but I did not murder him and Lyla did not either. After digging it up she approached me. She saw me do it and she did not know about our financial troubles until then. So were innocent ok!&quot;. Kenny looks defeated and Lyla says &quot;He&#39;s telling the truth, we had nothing to do with the murder.&quot;
+</tw-passagedata><tw-passagedata pid="106" name="press couple 4" tags="" position="2403,2699" size="100,100">Kenny says &quot;I was starting to give up on finding it and with this one breathing down my neck I was thinking of just giving up” and Lyla mumbles &quot;Like you give up on everything.&quot;. Kenny gives her a look but continues &quot;I happened to see a small berry bush at the very back of the garden. It was the only one there. So when the place was a little less active I made my way over and got the gold. I stole from Alfrid but I did not murder him and Lyla did not either. After digging it up she approached me. She saw me do it and she did not know about our financial troubles until then. So were innocent ok!&quot;. Kenny looks defeated and Lyla says &quot;He&#39;s telling the truth, we had nothing to do with the murder.&quot;
 {
 (if: $JanitoLikeYou is true)[
 Jeremiah looks like he just learnt something and then says &quot;Wait&quot; but then pauses for a bit and says &quot;I can back them up on that story&quot;
@@ -653,14 +659,14 @@ Jeremiah looks like he just learnt something and then says &quot;Wait&quot; but 
 [[Please tell us-&gt;janitor helps couple]]
 ]
 }
-[[I have heard enough-&gt;pick someone]]</tw-passagedata><tw-passagedata pid="107" name="janitor helps couple" tags="" position="2590.0000000000005,2723.3333333333326" size="100,100">He clears his throat and says &quot;Well the next day the garden was dug up around the berry bush at the back. I remember this. It was very strange but I assumed the police had done it. I think there telling the truth.&quot; Lyla says &quot;Yes! See we had nothing to do with any of this!!&quot;. Kenny says with a smile “You see were good people. We would never murder someone!”.
+[[I have heard enough-&gt;pick someone]]</tw-passagedata><tw-passagedata pid="107" name="janitor helps couple" tags="" position="2590,2723" size="100,100">He clears his throat and says &quot;Well the next day the garden was dug up around the berry bush at the back. I remember this. It was very strange but I assumed the police had done it. I think there telling the truth.&quot; Lyla says &quot;Yes! See we had nothing to do with any of this!!&quot;. Kenny says with a smile “You see were good people. We would never murder someone!”.
 
-[[I have heard enough-&gt;pick someone]]</tw-passagedata><tw-passagedata pid="108" name="pick someone" tags="" position="2913.333333333334,2726.666666666666" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="109" name="press jason for more 2" tags="" position="2788.3333333333335,2128.3333333333335" size="100,100">Jason gets angry and says &quot;It was them!&quot; and point at Kenny and Lyla. They both looked shocked and Lyla shouts &quot;Who do you think you are, blaming me!!!&quot;.
+[[I have heard enough-&gt;pick someone]]</tw-passagedata><tw-passagedata pid="108" name="pick someone" tags="" position="2913,2726" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="109" name="press jason for more 2" tags="" position="2788,2128" size="100,100">Jason gets angry and says &quot;It was them!&quot; and point at Kenny and Lyla. They both looked shocked and Lyla shouts &quot;Who do you think you are, blaming me!!!&quot;.
 
 [[Tell Lyla to stop-&gt;press jason for more 3]]
-[[Leave Lyla continue-&gt;press jason for more 4]]</tw-passagedata><tw-passagedata pid="110" name="press jason for more 3" tags="" position="2725.0000000000005,2286.6666666666665" size="100,100">Lyla scouls and Jason continues &quot;I seen Kenny walking up the path from the beach to the garden that evening and then Lyla was sneaking up after him. They were up to something I know it!!&quot;. Lyla shouts &quot;Lies!!!&quot; at him but Kenny looks nervous.
+[[Leave Lyla continue-&gt;press jason for more 4]]</tw-passagedata><tw-passagedata pid="110" name="press jason for more 3" tags="" position="2725,2286" size="100,100">Lyla scouls and Jason continues &quot;I seen Kenny walking up the path from the beach to the garden that evening and then Lyla was sneaking up after him. They were up to something I know it!!&quot;. Lyla shouts &quot;Lies!!!&quot; at him but Kenny looks nervous.
 
-[[Care to explain Lyla and Kenny.-&gt;press couple for more]]</tw-passagedata><tw-passagedata pid="111" name="press jason for more 4" tags="" position="2840,2391.666666666667" size="100,100">Lylay continues &quot;You little murder!! I know you done it! What you just wanted to know how it feels?! If you were not already dead I would kill you myself!!&quot;. Kenny stops her by shouting &quot;Stop!&quot;. Ther is a long silence.
+[[Care to explain Lyla and Kenny.-&gt;press couple for more]]</tw-passagedata><tw-passagedata pid="111" name="press jason for more 4" tags="" position="2840,2391" size="100,100">Lylay continues &quot;You little murder!! I know you done it! What you just wanted to know how it feels?! If you were not already dead I would kill you myself!!&quot;. Kenny stops her by shouting &quot;Stop!&quot;. Ther is a long silence.
 
 [[Care to explain Lyla and Kenny.-&gt;press couple for more]]</tw-passagedata></tw-storydata>
 
