@@ -82,6 +82,7 @@ mark{
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -97,6 +98,7 @@ mark{
 
 
     
+
 
 
 
@@ -263,7 +265,7 @@ This must be the family he left behind with his affair scandal, what a pity...</
 [[go to benches-&gt;benches]]
 [[go to garden -&gt; garden]]</tw-passagedata><tw-passagedata pid="45" name="beach" tags="" position="1527,1714" size="100,100">You see 2 ghosts, both arguing over and back but you cant make out what there saying.
 
-[[walk towards ghosts -&gt;couple intro]] </tw-passagedata><tw-passagedata pid="46" name="bar" tags="" position="887,2108" size="100,100">(if: $hasMetEdward is 0)
+[[walk towards ghosts -&gt;couple intro]] </tw-passagedata><tw-passagedata pid="46" name="bar" tags="" position="890.3333333333334,2028" size="100,100">(if: $hasMetEdward is 0)
 [&quot;And who might you be?&quot;, a voice bellowed as you enter what seemed to be a whiskey bar in it&#39;s prime.
 
 You look in the direction that the voice came from and see that whom could not be mistaken with anyone else, [[Edward Shanks-&gt;Edward Shanks]].
@@ -293,13 +295,15 @@ I assume this is the resort janitor Jeremiah Booth..
 Jeremiah says in a dissapointed tone you think it&#39;s because he of no more help to you and feels useless.
 [[Return to reception-&gt;reception]] 
 ]
-[[Open Notebook-&gt;open notebook]] </tw-passagedata><tw-passagedata pid="49" name="question Edward" tags="" position="946,2251" size="100,100">&quot;So you want to know if it was me, do you...?&quot; he says, for what seems to be his one-thousanth time.
+[[Open Notebook-&gt;open notebook]] </tw-passagedata><tw-passagedata pid="49" name="question Edward" tags="" position="759.3333333333333,2146" size="100,100">&quot;So you want to know if it was me, do you...?&quot; he says, for what seems to be his one-thousanth time.
 
 &quot;I know everyone seems me as this terrifying man, and don&#39;t get me wrong, I was!&quot; he laughs &quot;but I did not kill that man, although I did despise him greatly.&quot;
 
-[[Did you see anything that night?-&gt;edward saw]]
-[[Request Alibi-&gt;edward alibi]]
-(set: $hasMetEdward to 1)</tw-passagedata><tw-passagedata pid="50" name="edward alibi" tags="" position="1078,2376.3333333333335" size="100,100">&quot;I was here, like every other day I had to spend in this horrible establishment...&quot; he shouted, throwing his glass at the wall in a tantrum.
+&quot;Those bastards framed me&quot; he said softly, staring down the whiskey glass.
+
+[[What do you mean?-&gt;question Edward 2]]
+
+</tw-passagedata><tw-passagedata pid="50" name="edward alibi" tags="" position="1038,2411" size="100,100">&quot;I was here, like every other day I had to spend in this horrible establishment...&quot; he shouted, throwing his glass at the wall in a tantrum.
 
 &quot;People didn&#39;t believe me of course, thought I killed [[Alfred]] in cold blood.&quot; he said, calm once more.
 
@@ -561,7 +565,7 @@ There seems to be no indication of a head-smashing on Mr. Jones&#39; ghostly rei
 	
 	If you don&#39;t mind, I&#39;d like to be left alone.&quot;//
 	
-	It doesn&#39;t seem like you&#39;re going to get much more information out of Jason, but he at least told you his alibi. You keep a note of it and [[leave]].</tw-passagedata><tw-passagedata pid="93" name="leave" tags="" position="1182,2485" size="100,100">You start heading back from [[where you came|reception]]</tw-passagedata><tw-passagedata pid="94" name="edward saw" tags="" position="872.6666666666666,2381" size="100,100">&quot;No you imp, I was at the bar the whole night drinking...&quot;
+	It doesn&#39;t seem like you&#39;re going to get much more information out of Jason, but he at least told you his alibi. You keep a note of it and [[leave]].</tw-passagedata><tw-passagedata pid="93" name="leave" tags="" position="1182,2485" size="100,100">You start heading back from [[where you came|reception]]</tw-passagedata><tw-passagedata pid="94" name="edward saw" tags="" position="872,2381" size="100,100">&quot;No you imp, I was at the bar the whole night drinking...&quot;
 
 &quot;Why would I waste my time caring about other people&#39;s affairs!&quot; he growled.
 
@@ -569,7 +573,7 @@ Something tells you that those mannerisms were not a lie, Edward truly didn&#39;
 
 Edward starts the scratch his head, aggitated.
 
-You [[question him-&gt;question edward]] about it.</tw-passagedata><tw-passagedata pid="95" name="question edward" tags="" position="872.6666666666666,2531" size="100,100">Edward shows you the back of his head, revealing a nasty dent.
+You [[question him-&gt;question edward]] about it.</tw-passagedata><tw-passagedata pid="95" name="question edward" tags="" position="890.3333333333334,2554.333333333333" size="100,100">Edward shows you the back of his head, revealing a nasty dent.
 
 You ask him how he got it and he tells you it&#39;s the way in which he died.
 
@@ -579,7 +583,16 @@ You ask him how he got it and he tells you it&#39;s the way in which he died.
 
 [[Ask about alibi-&gt;edward alibi]] 
 [[Return to reception-&gt;reception]]
-[[Open Notebook-&gt;open notebook]]</tw-passagedata></tw-storydata>
+[[Open Notebook-&gt;open notebook]]</tw-passagedata><tw-passagedata pid="96" name="question Edward 2" tags="" position="700.3333333333333,2317.666666666667" size="100,100">&quot;When I returned to my room that night, there was a briefcase lying under bed.&quot;
+&quot;When I opened it was full of these marvellous rubys and diamonds, jewelry galore.&quot;
+
+&quot;I knew it was a setup, those bastards got me.&quot; he said &quot;two minutes later my room was full of police.&quot; he shouted, still bitter.
+
+&quot;I spent two nights in the slammer but money had a way with words and I was out quick enough...&quot; he laughed
+
+[[Did you see anything that night?-&gt;edward saw]]
+[[So where were you that night then?-&gt;edward alibi]]
+(set: $hasMetEdward to 1)</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
