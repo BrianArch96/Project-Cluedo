@@ -86,6 +86,7 @@ mark{
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -111,29 +112,24 @@ mark{
 
 
 
+
 </script><tw-tag name="notebook" color="purple"></tw-tag>,<tw-tag name="beach" color="yellow"></tw-tag>,<tw-tag name="startup" color="gray"></tw-tag><tw-passagedata pid="1" name="Start" tags="" position="231,121" size="100,100">You wake up in a dimly lit room on a boat. You&#39;re on your way to an island to inquire about an unsolved murder-mystery that took place fifty years ago. Straight in front of the bed is the [[door]] leading out of the room and to the right of the bed is a [[desk]] cluttered with what seems to papers.
     
 
 [[walk towards door]]
-[[go over to the desk]]
-(set: $hasNotebook to 0)
-(set: $hasMetEdward to 0)
-(set: $hasMetJeremiah to 0)
-(set: $hasMetShane to 0)
-(set: $hasMetWhitworth to 0)
-(set: $talkToCaptain to 0)</tw-passagedata><tw-passagedata pid="2" name="door" tags="" position="845,33" size="100,100">From close inspection, the door seems to made of mahogany. It seems well worn out and hasn&#39;t been refurbished in some time. The handle seems to have collected a small layer of dust through lack of usage.
+[[go over to the desk]]</tw-passagedata><tw-passagedata pid="2" name="door" tags="" position="845,33" size="100,100">From close inspection, the door seems to made of mahogany. It seems well worn out and hasn&#39;t been refurbished in some time. The handle seems to have collected a small layer of dust through lack of usage.
 
-You notice that you&#39;re missing your notepad and [[go over to the desk]] to search for it.</tw-passagedata><tw-passagedata pid="3" name="desk" tags="" position="468,147" size="100,100">The desk seems to badly worn and seems to be clustered with a combination of papers bridged up on some book-type object. You [[go over to the desk]] to inspect it further.</tw-passagedata><tw-passagedata pid="4" name="go over to the desk" tags="" position="470,272" size="100,100">(set: $hasNotebook to 1)
+You notice that you&#39;re missing your notepad and [[go over to the desk]] to search for it.</tw-passagedata><tw-passagedata pid="3" name="desk" tags="" position="468,147" size="100,100">The desk seems to badly worn and seems to be clustered with a combination of papers bridged up on some book-type object. You [[go over to the desk]] to inspect it further.</tw-passagedata><tw-passagedata pid="4" name="go over to the desk" tags="" position="470,272" size="100,100">(set: $hasNotebook to true)
 
 Once you reach the desk, you notice a clutter of papers, you search through them and find your notebook, used to keep all details relating to the case at.
 
 [[open notebook]]
-[[walk towards door]] </tw-passagedata><tw-passagedata pid="5" name="walk towards door" tags="" position="724,35" size="100,100">(if: $hasNotebook is 1) [You grasp the dusty door handle and make to [[leave the room]]]
+[[walk towards door]] </tw-passagedata><tw-passagedata pid="5" name="walk towards door" tags="" position="724,35" size="100,100">(if: $hasNotebook) [You grasp the dusty door handle and make to [[leave the room]]]
     
-(if: $hasNotebook is 0) [You get out of the bed drowsily, put on some clothes and make your way towards to the door. Noticing that you&#39;ve made to leave without your essential notepad, you [[go over to the desk]] to retrieve it.]</tw-passagedata><tw-passagedata pid="6" name="open notebook" tags="notebook" position="40,394" size="100,100">&#39;&#39;&#39;Notebook index&#39;&#39;&#39;
+(if: not $hasNotebook) [You get out of the bed drowsily, put on some clothes and make your way towards to the door. Noticing that you&#39;ve made to leave without your essential notepad, you [[go over to the desk]] to retrieve it.]</tw-passagedata><tw-passagedata pid="6" name="open notebook" tags="notebook" position="40,390.6666666666667" size="100,100">&#39;&#39;&#39;Notebook index&#39;&#39;&#39;
 
 [[Details of Events-&gt;description]]
-(if: $hasMetJeremiah is 1 or $hasMetShane is 1 or $hasMetEdward is 1 or $hasMetWhitworth)[
+(if: $hasMetJeremiah or $hasMetJason or $hasMetEdward or $hasMetWhitworth)[
 [[List of Suspects-&gt;list of suspects]]
 ]</tw-passagedata><tw-passagedata pid="7" name="go up on deck" tags="" position="734,265" size="100,100">The breeze of the sea  is brittle and cuts through you like ice.
 
@@ -144,21 +140,21 @@ I&#39;ve been sent by the bureau to investigate the mystery and with any luck so
 To do this, I must travel to the island and search it for anything that the investigators at the time &#39;&#39;&#39;missed&#39;&#39;&#39; due to bribary or fearmongering by [[Edward-&gt;edward traits act1]].
 
 Only time will tell if I&#39;ll be able to solve this mystery, and relieve this once great island of the despair and horrow it&#39;s bottled for over half a century...
-(if: $talkToCaptain is 1) [
+(if: $talkToCaptain) [
 The captain has informed you that the resort is home to ghosts, trapped by the unsolved mystery of the &#39;&#39;Alfred Jones&#39;&#39; murder.
 
 He also mentioned that the ghosts are scattered throughout the island but are bound by the island to answer(truthfully or otherwise any questions I may ask in relation to the incident that took place fifty years ago.
-]</tw-passagedata><tw-passagedata pid="9" name="list of suspects" tags="" position="294,532" size="100,100">&#39;&#39;List of Suspects&#39;&#39;
-(if: $hasMetJeremiah is 1) [
+]</tw-passagedata><tw-passagedata pid="9" name="list of suspects" tags="" position="295.6666666666667,532" size="100,100">&#39;&#39;List of Suspects&#39;&#39;
+(if: $hasMetJeremiah) [
 [[Jeremiah Booth]]
 ]
-(if: $hasMetEdward is 1) [
+(if: $hasMetEdward) [
 [[Edward Shanks]]
 ]
-(if: $hasMetWhitworth is 1)[
+(if: $hasMetWhitworth)[
 [[Whitworth Couple]]
 ]
-(if: $hasMetJason is 1) [
+(if: $hasMetJason) [
 [[Jason Price]]
 ]</tw-passagedata><tw-passagedata pid="10" name="leave the room" tags="" position="734,152" size="100,100">You make your way through the hallway and [[go up on deck]]</tw-passagedata><tw-passagedata pid="11" name="Edward Shanks" tags="" position="319,1264" size="100,100">&#39;&#39;Edward Shanks&#39;&#39;
 [[traits-&gt;edward traits act1]]
@@ -214,7 +210,7 @@ jeremiah: I was watering the plants in the garden that is hardly an alibi worth 
 [[alibi-&gt;Whitworth alibi act1]]</tw-passagedata><tw-passagedata pid="27" name="Whitworth traits act1" tags="" position="138,1377" size="100,100">Kenny is very secretive.
 Lyla is always belittling him and will interrupt him a lot.
 Kenny and Lyla got in a big fight on the island because Lyla thought this was going to be a relaxing vacation but Kenny kept leaving her and sneaking off on his own. This really pissed off Lyla and she wanted to know what he was doing. They seem very angry at eachother.</tw-passagedata><tw-passagedata pid="28" name="Whitworth looks act1" tags="" position="23,1374" size="100,100">Lyla is a tall blonde woman with very big hair, She was a news anchor when she was younger and still keeps up appearances as a stay at home mother. She also always seems to have a large smile even when angry. Seems like a skill she learnt from her days as a news anchor.
-Kenny is a bit shorter then Lyla, has dark hair with a few grey hairs throughout. His hair is thinning on the top</tw-passagedata><tw-passagedata pid="29" name="Whitworth motive act1" tags="" position="25,1502" size="100,100">&gt;A few weeks after the murder Kenny was let go and people did not think they would be ok financially, expecially because they filled for devorce around the same time. But they both seemed to bounce back ok which means they may have robbed [[Alfred]] to stop them going broke and then murdered him when they were caught</tw-passagedata><tw-passagedata pid="30" name="Whitworth alibi act1" tags="" position="146,1500" size="100,100">They say they were at the beach and there was witnesses saying they heard them arguing in the direction of the beach but there is actually no eye witnness</tw-passagedata><tw-passagedata pid="31" name=" Tomahawk" tags="" position="160,646" size="100,100">Small island off the coast of Portugal.
+Kenny is a bit shorter then Lyla, has dark hair with a few grey hairs throughout. His hair is thinning on the top</tw-passagedata><tw-passagedata pid="29" name="Whitworth motive act1" tags="" position="25,1502" size="100,100">&gt;A few weeks after the murder Kenny was let go and people did not think they would be ok financially, expecially because they filled for devorce around the same time. But they both seemed to bounce back ok which means they may have robbed [[Alfred]] to stop them going broke and then murdered him when they were caught</tw-passagedata><tw-passagedata pid="30" name="Whitworth alibi act1" tags="" position="146,1500" size="100,100">They say they were at the beach and there was witnesses saying they heard them arguing in the direction of the beach but there is actually no eye witnness</tw-passagedata><tw-passagedata pid="31" name=" Tomahawk" tags="" position="165,656" size="100,100">Small island off the coast of Portugal.
 
 After the murder of [[Alfred Jones-&gt;Alfred]] in 1950, it lost most of it&#39;s resorts to bankruptcy, as most of them were owned by Alfred and went bust. Although, several resorts boomed because of this, most owned by [[Edward Shanks-&gt;edward traits act1]] whom seemed to make a killing(pun intended) off the disaster.
 
@@ -238,7 +234,7 @@ One of the crew men tap you on the shoulder to tell you that the ship is about t
 &quot;Thanks for the heads up. It looks like we&#39;ve arrived. [[I&#39;ll be going now-&gt;arrived]] Captain, thanks for everything!&quot;
 
 &#39;&#39;Details of Events&#39;&#39; has been updated
-(set: $talkToCaptain to 1)</tw-passagedata><tw-passagedata pid="38" name="arrived" tags="" position="1024,668" size="100,100">You arrive on the island and met by small disfigured man who tells you he will be escorting you to the resort. Looking back at the Captain for reassurance, you come to the realization that you&#39;re on your own as you see the captain getting ready to leave.
+(set: $talkToCaptain to true)</tw-passagedata><tw-passagedata pid="38" name="arrived" tags="" position="1099,674.6666666666666" size="100,100">You arrive on the island and met by small disfigured man who tells you he will be escorting you to the resort. Looking back at the Captain for reassurance, you come to the realization that you&#39;re on your own as you see the captain getting ready to leave.
 
 [[Follow escort to resort]]
 
@@ -258,37 +254,36 @@ His very presence makes your skin crawl as you make way to [[hurry inside the re
 	All of a sudden, you see a shadowy figure emerge from behind the tipped-over office desk. He exclaims:
 	//“You, there. Who are you? What is your business here?”//
 
-	[[Tell him why you are here]]</tw-passagedata><tw-passagedata pid="43" name="office" tags="" position="678,1929" size="100,100">The office is worn and tattered, dust over everything in the room. It looks like it hasn&#39;t been touched let alone cleaned in years, the paint in stripped off the majority of the walls, some left to rot over the years.
+	[[Tell him why you are here]]</tw-passagedata><tw-passagedata pid="43" name="reception" tags="" position="1090.3333333333333,1910.6666666666665" size="100,100">From the reception, you can go to four areas, each containing a key suspect from Alfred&#39;s murder.
 
-In the centre of the room is grand oak desk, covered in pieces of crumbled paper and dried out ink splatters. 
+[[Go to beach-&gt;beach]]
+[[Go to bar-&gt;bar]]
+[[Go to benches-&gt;benches]]
+[[Go to garden -&gt; garden]]
+[[[Gather everyone for trial-&gt;trial]]](trial|
 
-One thing that seems almost out of place is a photo frame facing towards the door, away from Alfred&#39;s view.
+{
+(if: $hasMetEdward and $hasMetJerimiah and $hasMetJason and $hasMetWhitworth)[
+	(show: ?trial)
+]
+}</tw-passagedata><tw-passagedata pid="44" name="beach" tags="" position="1527,1714" size="100,100">You see 2 ghosts, both arguing over and back but you cant make out what there saying.
 
-Through the dust, you make out three figures, Alfred, a woman and a child, no more than seven years old.
-
-This must be the family he left behind with his affair scandal, what a pity...</tw-passagedata><tw-passagedata pid="44" name="reception" tags="" position="1092,1914" size="100,100">From the reception, you can go to four areas, each containing a key suspect from Alfred&#39;s murder.
-
-[[go to beach-&gt;beach]]
-[[go to bar-&gt;bar]]
-[[go to benches-&gt;benches]]
-[[go to garden -&gt; garden]]</tw-passagedata><tw-passagedata pid="45" name="beach" tags="" position="1527,1714" size="100,100">You see 2 ghosts, both arguing over and back but you cant make out what there saying.
-
-[[walk towards ghosts -&gt;couple intro]] </tw-passagedata><tw-passagedata pid="46" name="bar" tags="" position="890,2028" size="100,100">(if: $hasMetEdward is 0)
+[[walk towards ghosts -&gt;couple intro]] </tw-passagedata><tw-passagedata pid="45" name="bar" tags="" position="558.6666666666666,2007.6666666666667" size="100,100">(if: not $hasMetEdward)
 [&quot;And who might you be?&quot;, a voice bellowed as you enter what seemed to be a whiskey bar in it&#39;s prime.
 
 You look in the direction that the voice came from and see that whom could not be mistaken with anyone else, [[Edward Shanks-&gt;Edward Shanks]].
 
 Sitting at a the bar, drinking a whiskey on the rocks (however that works for ghosts), he ushers you over, prompting you to [[ask questions-&gt;question Edward]]]
 
-(if: $hasMetEdward is 1)[
+(if: $hasMetEdward)[
 &quot;I told you everything I know boy.&quot; Edwards utters as he notices your return.
 &quot;The rest is up to you, good luck to you.&quot;
 [[Return to reception-&gt;reception]] 
 ]
-[[Open Notebook-&gt;open notebook]] </tw-passagedata><tw-passagedata pid="47" name="benches" tags="" position="1254,2096" size="100,100">	You arrive at a path overlooking the lake. You spot a park bench perfectly situated for viewing the scenery and on it, the ghostly figure of a stern, stocky young man. He seems to be looking into the distance, lost in thought
+[[Open Notebook-&gt;open notebook]] </tw-passagedata><tw-passagedata pid="46" name="benches" tags="" position="1599.3333333333333,2093.6666666666665" size="100,100">	You arrive at a path overlooking the lake. You spot a park bench perfectly situated for viewing the scenery and on it, the ghostly figure of a stern, stocky young man. He seems to be looking into the distance, lost in thought
 
 	//[[&quot;Are you Jason?&quot;]]//
-</tw-passagedata><tw-passagedata pid="48" name=" garden" tags="" position="1482,2074" size="100,100">(if: $hasMetJeremiah is 0)
+</tw-passagedata><tw-passagedata pid="47" name=" garden" tags="" position="2070.666666666667,2060.3333333333335" size="100,100">(if: not $hasMetJeremiah)
 [*Years since this island has had anyone to maintain it, the garden still appears as a beautiful meadow. Flowers are blooming and fruit is ripening on the trees.The morning dew still on the tips of the weedgrass.
 
 Off in the corner of the garden stands an aged man in a grey jumpsuit. You can tell just from his posture that he’s been through a lot in his life, and probably worked hard to get what he wanted in life.*
@@ -297,13 +292,13 @@ I assume this is the resort janitor Jeremiah Booth..
 
 [[Maybe he could answer a question or two on the current situation.-&gt;question Jeremiah]]]
 
-(if: $hasMetJeremiah is 1)[
+(if: $hasMetJeremiah)[
 &quot;I&#39;m not sure there&#39;s anything else I can help you with anymore. perhaps you should take a look around the resort for some more clues.&quot; 
 
 Jeremiah says in a dissapointed tone you think it&#39;s because he of no more help to you and feels useless.
 [[Return to reception-&gt;reception]] 
 ]
-[[Open Notebook-&gt;open notebook]] </tw-passagedata><tw-passagedata pid="49" name="question Edward" tags="" position="759,2146" size="100,100">&quot;So you want to know if it was me, do you...?&quot; he says, for what seems to be his one-thousanth time.
+[[Open Notebook-&gt;open notebook]] </tw-passagedata><tw-passagedata pid="48" name="question Edward" tags="" position="549.3333333333333,2145.6666666666665" size="100,100">&quot;So you want to know if it was me, do you...?&quot; he says, for what seems to be his one-thousanth time.
 
 &quot;I know everyone seems me as this terrifying man, and don&#39;t get me wrong, I was!&quot; he laughs &quot;but I did not kill that man, although I did despise him greatly.&quot;
 
@@ -311,7 +306,7 @@ Jeremiah says in a dissapointed tone you think it&#39;s because he of no more he
 
 [[What do you mean?-&gt;question Edward 2]]
 
-</tw-passagedata><tw-passagedata pid="50" name="edward alibi" tags="" position="1038,2411" size="100,100">&quot;I was here, like every other day I had to spend in this horrible establishment...&quot; he shouted, throwing his glass at the wall in a tantrum.
+</tw-passagedata><tw-passagedata pid="49" name="edward alibi" tags="" position="621.3333333333334,2431.6666666666665" size="100,100">&quot;I was here, like every other day I had to spend in this horrible establishment...&quot; he shouted, throwing his glass at the wall in a tantrum.
 
 &quot;People didn&#39;t believe me of course, thought I killed [[Alfred]] in cold blood.&quot; he said, calm once more.
 
@@ -324,146 +319,150 @@ Jeremiah says in a dissapointed tone you think it&#39;s because he of no more he
 [[What did you see that night-&gt;edward saw]] 
 [[Return to reception-&gt;reception]]
 &#39;&#39;Notebook updated&#39;&#39;
-[[Open Notebook-&gt;open notebook]]</tw-passagedata><tw-passagedata pid="51" name="couple intro" tags="" position="2929,470" size="100,100">You introdouce yourself to them and mention the case of [[Alfred Jones-&gt;Alfred]].
+[[Open Notebook-&gt;open notebook]]</tw-passagedata><tw-passagedata pid="50" name="couple intro" tags="" position="2929,470" size="100,100">You introdouce yourself to them and mention the case of [[Alfred Jones-&gt;Alfred]].
 
 &quot;A Journalist! Theres no story here, it was that other resort owner, everyone knows.&quot; shouts the female ghost.
 The male ghost quickly says &quot;Well thats not true, they could never prove anything. That investagation was a sham!&quot;. He then goes on to introduce them. &quot;My name is Kenny Whitworth and this here is my lovely joyous ex-wife, Lyla Whitworth&quot;
 
 [[Where were ye at the time of the murder?-&gt;couple at time of murder]]
 {
-	(set: $hasMetWhitworth to 1)
-}</tw-passagedata><tw-passagedata pid="52" name="couple at time of murder" tags="" position="2928,589" size="100,100">Lyla immediately responds saying &quot;We were both right here! We spent the whole evening trying to enjoy the beach!&quot;
+	(set: $hasMetWhitworth to true)
+}</tw-passagedata><tw-passagedata pid="51" name="couple at time of murder" tags="" position="2928,589" size="100,100">Lyla immediately responds saying &quot;We were both right here! We spent the whole evening trying to enjoy the beach!&quot;
 Kenny then starts to say &quot;The police already asked around and people...&quot; when Lyla buts in &quot;Everyone on this island heard our little argument! This idiot made sure of that.&quot;
 
-[[Ask some questions?-&gt;couple questions]]</tw-passagedata><tw-passagedata pid="53" name=" couple argument 1" tags="" position="2591,793" size="100,100">Kenny starts to speak when Lyla says &quot;Oh I can’t wait to hear this!&quot;, Kenny pauses for a second before continuing &quot;Well, it was just one of those normal couple arguments. You know our relationship was not going so well at this time and well as I am sure you know it ended in a divorce.&quot;. Lyla looks angrily amused while he speaks and lets out a very loud &quot;Ha!&quot; as he finishes.
+[[Ask some questions?-&gt;couple questions]]</tw-passagedata><tw-passagedata pid="52" name=" couple argument 1" tags="" position="2591,793" size="100,100">Kenny starts to speak when Lyla says &quot;Oh I can’t wait to hear this!&quot;, Kenny pauses for a second before continuing &quot;Well, it was just one of those normal couple arguments. You know our relationship was not going so well at this time and well as I am sure you know it ended in a divorce.&quot;. Lyla looks angrily amused while he speaks and lets out a very loud &quot;Ha!&quot; as he finishes.
 She then starts to explain &quot;Well this small man next to me promised me a relaxing holiday. I was expecting we would be spending this time together but he had other plans!&quot;, Kenny looks annoyed as she continues, &quot;When we get here all of a sudden he keeps wanting to get away from me. Like as if he has something better to do then to spend time with me! So yes I was a little pissed about being left alone on this island. Not exactly the vacation I had planned.&quot;
 
 [[So what did you come here to do Kenny?-&gt;couple argument 2]]
-[[So what was Kenny doing when he left you Lyla?-&gt;couple argument 4]]</tw-passagedata><tw-passagedata pid="54" name="couple see anything 1" tags="" position="2915,919" size="100,100">Kenny just shakes his head and says &quot;Just sand and water, that’s all there is at a beach&quot;.
+[[So what was Kenny doing when he left you Lyla?-&gt;couple argument 4]]</tw-passagedata><tw-passagedata pid="53" name="couple see anything 1" tags="" position="2915,919" size="100,100">Kenny just shakes his head and says &quot;Just sand and water, that’s all there is at a beach&quot;.
 Lyla says &quot;Not like you were even paying attention to anything!&quot;
 
 [[So Kenny what were you focused on?-&gt;couple see anything 2]]
-[[Just sand? Was there no one else here that evening?-&gt;couple see anything 3]]</tw-passagedata><tw-passagedata pid="55" name="couple argument 2" tags="" position="2583,936" size="100,100">Kenny says aggressively &quot;I went on walks! You think you could relax with this one next to you?! I just wanted a relaxing holiday like everyone who comes here!&quot;.
+[[Just sand? Was there no one else here that evening?-&gt;couple see anything 3]]</tw-passagedata><tw-passagedata pid="54" name="couple argument 2" tags="" position="2583,936" size="100,100">Kenny says aggressively &quot;I went on walks! You think you could relax with this one next to you?! I just wanted a relaxing holiday like everyone who comes here!&quot;.
 Lyla rolls her eyes but seems to stop herself saying anything.
 
 [[Where did these walk bring you Kenny? -&gt;couple argument 3]]
 [[Lyla what do you think he was here to do? -&gt;couple argument 4]]
 {
 (set: $kennyGoesForWalks to true)
-}</tw-passagedata><tw-passagedata pid="56" name="couple know victim 1" tags="" position="3323,925" size="100,100">Lyla says &quot;I don’t know Kenny, did you know [[Alfred Jones-&gt;Alfred]]?!&quot;
+}</tw-passagedata><tw-passagedata pid="55" name="couple know victim 1" tags="" position="3323,925" size="100,100">Lyla says &quot;I don’t know Kenny, did you know [[Alfred Jones-&gt;Alfred]]?!&quot;
 Kenny responds to her &quot;Ha, no of course not! What are you trying to say? All I knew about him is that he owned this place. Never meet the man.&quot;
 
 [[So while here you never happened across him?-&gt;couple know victim 2]]
-[[Hmmm well he was a pretty well know figure. I find it hard to belie ye would not of knows of him and his wealth.-&gt;couple know victim 3]]</tw-passagedata><tw-passagedata pid="57" name="couple argument 3" tags="" position="2583,1067" size="100,100">Kenny says &quot;Well I would walk all over really, the beach, the docks or the garden. Really anywhere I could get away from her.&quot; Lyla scowls at him.
+[[Hmmm well he was a pretty well know figure. I find it hard to belie ye would not of knows of him and his wealth.-&gt;couple know victim 3]]</tw-passagedata><tw-passagedata pid="56" name="couple argument 3" tags="" position="2583,1067" size="100,100">Kenny says &quot;Well I would walk all over really, the beach, the docks or the garden. Really anywhere I could get away from her.&quot; Lyla scowls at him.
 
 [[Lyla what do you think he was here to do? -&gt;couple argument 4]]
-[[Did you happen to go on one of these walks at that evening at the beach?-&gt;couple argument 5]]</tw-passagedata><tw-passagedata pid="58" name="couple argument 4" tags="" position="2343,939" size="100,100">Lyla has to think about it but then says &quot;He was probably cheating on me with one of the massagers up at the spa!&quot;.
+[[Did you happen to go on one of these walks at that evening at the beach?-&gt;couple argument 5]]</tw-passagedata><tw-passagedata pid="57" name="couple argument 4" tags="" position="2343,939" size="100,100">Lyla has to think about it but then says &quot;He was probably cheating on me with one of the massagers up at the spa!&quot;.
 Kenny says &quot;I was not and would not. You know I was just going for walks now let’s leave it there.&quot;
 
 [[Did you happen to go on one of these walks at that evening at the beach?-&gt;couple argument 5]]
 [[So Lyla you never followed him to see what he was doing?-&gt;couple argument 7]]
 {
 (set: $kennyGoesForWalks to true)
-}</tw-passagedata><tw-passagedata pid="59" name="couple questions" tags="" position="2926,715" size="100,100">[[What was the argument about? -&gt; couple argument 1]]
+}</tw-passagedata><tw-passagedata pid="58" name="couple questions" tags="" position="2926,715" size="100,100">[[What was the argument about? -&gt; couple argument 1]]
 [[Did ye see anything unusual? -&gt;couple see anything 1]]
-[[Did ye know the victim? -&gt;couple know victim 1]]</tw-passagedata><tw-passagedata pid="60" name="couple argument 5" tags="" position="2587,1215" size="100,100">Kenny gets a little flustered &quot;No no no, I stayed right here!&quot;
+[[Did ye know the victim? -&gt;couple know victim 1]]</tw-passagedata><tw-passagedata pid="59" name="couple argument 5" tags="" position="2587,1215" size="100,100">Kenny gets a little flustered &quot;No no no, I stayed right here!&quot;
 
 [[But you did say you went on walks to get away from Lyla and that night ye had an argument so it seems like something you might do.-&gt;couple argument 6]]
 {
 (set: $askKennyAboutWalkingThatDay to true)
-}</tw-passagedata><tw-passagedata pid="61" name="couple argument 6" tags="" position="2691,1575" size="100,100">Lyla says with a smirk &quot;You know as a matter of fact, Yes! Maybe he did go for one of his little walks he is so fond of that evening!&quot;. As she’s speaking you can see that Kenny is getting very nervous and agitated. He then says back &quot;Shut up you old fool, you know that’s not true and you are just spiteful. Just remember what he goes back and writes about me also reflects badly on you and our kids! Think of them and tell him your lying!!&quot;. Lyla looses her smirk at the thought of her kids. She then mutters in a soft tone &quot;Yes I was just kidding, he was with me the whole day.&quot;.
+}</tw-passagedata><tw-passagedata pid="60" name="couple argument 6" tags="" position="2691,1575" size="100,100">Lyla says with a smirk &quot;You know as a matter of fact, Yes! Maybe he did go for one of his little walks he is so fond of that evening!&quot;. As she’s speaking you can see that Kenny is getting very nervous and agitated. He then says back &quot;Shut up you old fool, you know that’s not true and you are just spiteful. Just remember what he goes back and writes about me also reflects badly on you and our kids! Think of them and tell him your lying!!&quot;. Lyla looses her smirk at the thought of her kids. She then mutters in a soft tone &quot;Yes I was just kidding, he was with me the whole day.&quot;.
 It seems like they both really care about their kids and what they will think when you write about them as part of this investigation.
 
 {
-(if: $askLylaAboutFollowingKenny is true)[
+(if: $askLylaAboutFollowingKenny)[
 It seems like you got the whole story.
 [[Ask new question-&gt;couple questions]]
 ]
 (else:)[
 [[So anyway, Lyla you never followed him to see what he was doing?-&gt;couple argument 7]]
 ]
-}</tw-passagedata><tw-passagedata pid="62" name="couple argument 7" tags="" position="2292,1105" size="100,100">It seems like you hurt Lyla&#39;s pride. She says &quot;Well I did think of following him to see where he went but I just did not care. I was here to relax so I did.&quot;. 
+}</tw-passagedata><tw-passagedata pid="61" name="couple argument 7" tags="" position="2292,1105" size="100,100">It seems like you hurt Lyla&#39;s pride. She says &quot;Well I did think of following him to see where he went but I just did not care. I was here to relax so I did.&quot;. 
 
 [[But if you did not care then why were you so angry?-&gt;couple argument 8]]
 
 {
 (set: $askLylaAboutFollowingKenny to true)
-}</tw-passagedata><tw-passagedata pid="63" name="couple argument 8" tags="" position="2267,1299" size="100,100">Lyla gets angry and blurts out &quot;I don’t care! I am angry because this fool was losing his job!&quot;. Kenny looks sad.
+}</tw-passagedata><tw-passagedata pid="62" name="couple argument 8" tags="" position="2267,1299" size="100,100">Lyla gets angry and blurts out &quot;I don’t care! I am angry because this fool was losing his job!&quot;. Kenny looks sad.
 The investigation never mentioned Kenny knowing he was being let go before they went on vacation. Seems like a key piece of information.
 
 [[So Kenny you were losing your job?-&gt;couple argument 9]]
-[[So ye knew about Kenny being let go before ye went on this trip?-&gt;couple argument 10]]</tw-passagedata><tw-passagedata pid="64" name="couple argument 9" tags="" position="2235,1449" size="100,100">Kenny says &quot;Well yes as I am sure you know I was let go as CEO of Whithworth’s. It was a family business and it was supposed to be passed on to my kids like it was passed onto me. But those idiots thought I was the reason for the sales.&quot;. He looks very sad and defeated as he says this.
+[[So ye knew about Kenny being let go before ye went on this trip?-&gt;couple argument 10]]</tw-passagedata><tw-passagedata pid="63" name="couple argument 9" tags="" position="2216.6666666666665,1462.3333333333333" size="100,100">Kenny says &quot;Well yes as I am sure you know I was let go as CEO of Whithworth’s. It was a family business and it was supposed to be passed on to my kids like it was passed onto me. But those idiots thought I was the reason for the sales.&quot;. He looks very sad and defeated as he says this.
 Lyla almost looks sympathetic for a moment but then snaps back to being aggressive and says &quot;It was your own foolish actions that lost us everything!&quot;
 
-[[Ye both seemed pretty financially stable after the divorce.-&gt;couple argument 11]]</tw-passagedata><tw-passagedata pid="65" name="couple argument 10" tags="" position="2393,1291" size="100,100">Kenny says &quot;Well yes I knew but I let it slip while here. That’s why I was going for walks, I was too stressed. When I let it slip that’s when the arguments started&quot; but Lyla adds &quot;I would of never been so stupid with our money if I knew about the financial struggles that would be ahead.&quot;
+[[Ye both seemed pretty financially stable after the divorce.-&gt;couple argument 11]]</tw-passagedata><tw-passagedata pid="64" name="couple argument 10" tags="" position="2393,1291" size="100,100">Kenny says &quot;Well yes I knew but I let it slip while here. That’s why I was going for walks, I was too stressed. When I let it slip that’s when the arguments started&quot; but Lyla adds &quot;I would of never been so stupid with our money if I knew about the financial struggles that would be ahead.&quot;
 
 [[Ye both seemed pretty financially stable after the divorce.-&gt;couple argument 11]]
-[[So why book this expensive vacation if you knew you were losing your job Kenny?-&gt;couple argument 12]]</tw-passagedata><tw-passagedata pid="66" name="couple argument 11" tags="" position="2366,1467" size="100,100">Lyla shouts &quot;You don’t know what you’re talking about!&quot; and Kenny chimes in quite fast with &quot;Well I was able to call in a few favours and get back on my feet pretty fast. So we ended up ok&quot;. They clearly don’t like to talk about money.
-[[So why book this expensive vacation if you knew you were losing your job Kenny?-&gt;couple argument 12]]</tw-passagedata><tw-passagedata pid="67" name="couple argument 12" tags="" position="2513,1576" size="100,100">Kenny seems very nervous while Lyla scowls at him and says sarcastically &quot;Hmmmm ya very good question. Why would someone do something so stupid like that?&quot; and then she looks directly at Kenny.
+[[So why book this expensive vacation if you knew you were losing your job Kenny?-&gt;couple argument 12]]</tw-passagedata><tw-passagedata pid="65" name="couple argument 11" tags="" position="2366,1467" size="100,100">Lyla shouts &quot;You don’t know what you’re talking about!&quot; and Kenny chimes in quite fast with &quot;Well I was able to call in a few favours and get back on my feet pretty fast. So we ended up ok&quot;. They clearly don’t like to talk about money.
+[[So why book this expensive vacation if you knew you were losing your job Kenny?-&gt;couple argument 12]]</tw-passagedata><tw-passagedata pid="66" name="couple argument 12" tags="" position="2513,1576" size="100,100">Kenny seems very nervous while Lyla scowls at him and says sarcastically &quot;Hmmmm ya very good question. Why would someone do something so stupid like that?&quot; and then she looks directly at Kenny.
 Kenny responds with &quot;Well I wanted to have one last good memory for us, I wanted to treat Lyla before she found out.&quot;.
 Lyla laughs and says extremely sarcastically &quot;Ohhh yes this was one of my fondest memories, I am so glad I get to be stuck in it for the rest of eternity with you!!&quot;.
 
 {
-(if: $askKennyAboutWalkingThatDay is true)[
+(if: $askKennyAboutWalkingThatDay)[
 It seems like you got the whole story.
 [[Ask new question-&gt;couple questions]]
 ]
 (else:)[
 [[So anyway, Kenny did you happen to go on one of these walks at that evening at the beach?-&gt;couple argument 5]]
 ]
-}</tw-passagedata><tw-passagedata pid="68" name="couple see anything 2" tags="" position="2860,1074" size="100,100">Lyla scowls and says &quot;Probably all the other women in their bikinis walking up and down the beach! It was not me anyway.&quot;.
+}</tw-passagedata><tw-passagedata pid="67" name="couple see anything 2" tags="" position="2860,1074" size="100,100">Lyla scowls and says &quot;Probably all the other women in their bikinis walking up and down the beach! It was not me anyway.&quot;.
 {
 (set: $lylaSeenPeople to true)
-(if: $kennySeenNoPeople is true)[
+(if: $kennySeenNoPeople)[
 	[[But Kenny just said ye were in an excluded area and did not see much people?-&gt;couple see anything 4]]
 ]
 (else:)[
 	[[So Kenny all you saw were women?-&gt;couple see anything 3]]
 ]
-}</tw-passagedata><tw-passagedata pid="69" name="couple see anything 3" tags="" position="3013,1073" size="100,100">Kenny laughs and says &quot;Of course the beach was always full of people, but we did not notice anything unusual because we were down at this end, it’s a little bit more excluded so we did not see anyone for most of the evening.&quot;.
+}</tw-passagedata><tw-passagedata pid="68" name="couple see anything 3" tags="" position="3013,1073" size="100,100">Kenny laughs and says &quot;Of course the beach was always full of people, but we did not notice anything unusual because we were down at this end, it’s a little bit more excluded so we did not see anyone for most of the evening.&quot;.
 {
 (set: $kennySeenNoPeople to true)
-(if: $lylaSeenPeople is true)[
+(if: $lylaSeenPeople)[
 	[[But Lyla just said she seen a lot of women walk past. No one reported seeing ye?-&gt;couple see anything 4]]
 ]
 (else:)[
 	[[So Lyla, Kenny was just ignoring you?-&gt;couple see anything 2]]
 ]
-}</tw-passagedata><tw-passagedata pid="70" name="couple see anything 4" tags="" position="2943,1236" size="100,100">Kenny gets frustrated and says &quot;We were in an excluded...&quot; but is interrupted by Lyla who says &quot;Well we did not see anyone while we were here but on our walk down that’s all he was looking at!! While we were here that’s all that was on his mind is what I meant!!&quot;. Kenny adds &quot;I was not thinking of other women but she is correct about us being alone! No one came down to this section.&quot;. Lyla looks annoyed at his response and says &quot;Pffft, ya sure.&quot;.
+}</tw-passagedata><tw-passagedata pid="69" name="couple see anything 4" tags="" position="2943,1236" size="100,100">Kenny gets frustrated and says &quot;We were in an excluded...&quot; but is interrupted by Lyla who says &quot;Well we did not see anyone while we were here but on our walk down that’s all he was looking at!! While we were here that’s all that was on his mind is what I meant!!&quot;. Kenny adds &quot;I was not thinking of other women but she is correct about us being alone! No one came down to this section.&quot;. Lyla looks annoyed at his response and says &quot;Pffft, ya sure.&quot;.
 
 Seems like they did not see anything but they also seem to be hiding something.
 
-[[Ask new question-&gt;couple questions]]</tw-passagedata><tw-passagedata pid="71" name="couple know victim 2" tags="" position="3247,1050" size="100,100">Lyla says &quot;Well no I spent most my time at the beach, I did not get the time to use the rest of the facilities. I never saw him around the beach.&quot; and Kenny adds &quot;Ya we were both here the whole time. We never saw him!&quot;.
+[[Ask new question-&gt;couple questions]]</tw-passagedata><tw-passagedata pid="70" name="couple know victim 2" tags="" position="3247,1050" size="100,100">Lyla says &quot;Well no I spent most my time at the beach, I did not get the time to use the rest of the facilities. I never saw him around the beach.&quot; and Kenny adds &quot;Ya we were both here the whole time. We never saw him!&quot;.
 {
-(if: $kennyGoesForWalks is true)[
+(if: $kennyGoesForWalks)[
 [[Kenny what about your walks?-&gt;couple know victim 4]]
 ]
 (else:)[
 Seems like they were both on the beach the whole time.
 [[Ask new question-&gt;couple questions]]
 ]
-}</tw-passagedata><tw-passagedata pid="72" name="couple know victim 3" tags="" position="3392,1047" size="100,100">Lyla says angrily &quot;Well yes of course we knew of his wealth! I am very well educated! This does not mean we are some sort of murders waiting for our chance to off the man!!&quot;, Kenny just sighs at her anger.
+}</tw-passagedata><tw-passagedata pid="71" name="couple know victim 3" tags="" position="3392,1047" size="100,100">Lyla says angrily &quot;Well yes of course we knew of his wealth! I am very well educated! This does not mean we are some sort of murders waiting for our chance to off the man!!&quot;, Kenny just sighs at her anger.
 
-[[Seems like this is a bit of a touchy subject-&gt;couple know victim 5]]</tw-passagedata><tw-passagedata pid="73" name="couple know victim 4" tags="" position="3248,1205" size="100,100">Kenny gets nervous and says &quot;Well yes I went on walks. So I was not here the whole day but I did not see anything ok!&quot; and Lyla adds &quot;Look Kenny is a lying bastard but he and I had nothing to do with this murder! Ok!&quot;.
+[[Seems like this is a bit of a touchy subject-&gt;couple know victim 5]]</tw-passagedata><tw-passagedata pid="72" name="couple know victim 4" tags="" position="3248,1205" size="100,100">Kenny gets nervous and says &quot;Well yes I went on walks. So I was not here the whole day but I did not see anything ok!&quot; and Lyla adds &quot;Look Kenny is a lying bastard but he and I had nothing to do with this murder! Ok!&quot;.
 They both seem very agitated.
 
-[[Seems like this is a bit of a touchy subject-&gt;couple know victim 5]]</tw-passagedata><tw-passagedata pid="74" name="couple know victim 5" tags="" position="3386,1223" size="100,100">Kenny says &quot;Were ghosts eternally stuck in an argument in this place with the last person we would every want to be with! So yes were a little on edge when someone come and try’s to blame a murder on us!&quot;. Lyla just looks tired at the thought of eternity.
+[[Seems like this is a bit of a touchy subject-&gt;couple know victim 5]]</tw-passagedata><tw-passagedata pid="73" name="couple know victim 5" tags="" position="3390,1199" size="100,100">Kenny says &quot;Were ghosts eternally stuck in an argument in this place with the last person we would every want to be with! So yes were a little on edge when someone come and try’s to blame a murder on us!&quot;. Lyla just looks tired at the thought of eternity.
 Seems like they did not know him.
 
-[[Ask new question-&gt;couple questions]]</tw-passagedata><tw-passagedata pid="75" name="Startup" tags="startup" position="1102,44" size="100,100">{
+[[Ask new question-&gt;couple questions]]</tw-passagedata><tw-passagedata pid="74" name="Startup" tags="startup" position="1102,49" size="100,100">{
+&lt;!-- Vars for opening scene --&gt;
+(set: $hasNotebook to false)
+(set: $talkToCaptain to false)
+
+&lt;!-- Vars for Whitworth interaction --&gt;
 (set: $askLylaAboutFollowingKenny to false)
 (set: $askLylaAboutFollowingKenny to false)
 (set: $askKennyAboutWalkingThatDay to false)
+
+&lt;!--Vars for Jerimiah interaction --&gt;
 (set: $jeremiahOpinion to false)
 
-(set: $hasNotebook to 0)
-(set: $hasMetEdward to 0)
-(set: $hasMetJeremiah to 0)
-(set: $hasMetShane to 0)
-(set: $hasMetWhitworth to 0)
-(set: $talkToCaptain to 0)
-
-(set: $pressedJason to false)
+&lt;!-- Vars for storing whether player has met characters --&gt;
+(set: $hasMetEdward to false)
+(set: $hasMetJeremiah to false)
+(set: $hasMetJason to false)
+(set: $hasMetWhitworth to false)
 
 &lt;!-- Vars for 1st Alfred interaction --&gt;
 (set: $alfred_q2_asked to false)
@@ -472,56 +471,59 @@ Seems like they did not know him.
 (set: $jason_confession_how_find_asked to false)
 (set: $jason_confession_how_kill_asked to false)
 (set: $jason_confession_why_broken_glass_asked to false)
-}</tw-passagedata><tw-passagedata pid="76" name="question Jeremiah" tags="" position="1456,2203" size="100,100">[[Mr booth is it? I’ve got a couple questions I’d like to ask you if that&#39;s alright?-&gt; Booth Answer1]]
 
-[[You never submitted an alibi on the night of the murder yet you weren’t the prime suspect, can you explain this? Why didn’t you submit one?-&gt;Booth Answer2]]</tw-passagedata><tw-passagedata pid="77" name=" Booth Answer1" tags="" position="1725,2451" size="100,100">(if: $hasMetJeremiah is 1)[jeremiah: Oh, hello there that is me correct. You must be another reporter, I’ve seen quite a few of you over the years not much has come from it but I will oblige to help you in what you need.]
+&lt;!-- Vars for trial --&gt;
+(set: $pressedJason to false)
+}</tw-passagedata><tw-passagedata pid="75" name="question Jeremiah" tags="" position="2076.3333333333335,2226" size="100,100">[[Mr booth is it? I’ve got a couple questions I’d like to ask you if that&#39;s alright?-&gt; Booth Answer1]]
+
+[[You never submitted an alibi on the night of the murder yet you weren’t the prime suspect, can you explain this? Why didn’t you submit one?-&gt;Booth Answer2]]</tw-passagedata><tw-passagedata pid="76" name=" Booth Answer1" tags="" position="2236,2423" size="100,100">(if: $hasMetJeremiah)[jeremiah: Oh, hello there that is me correct. You must be another reporter, I’ve seen quite a few of you over the years not much has come from it but I will oblige to help you in what you need.]
 
 [[I was wondering if you could point me in the right direction, why was it that your alibi wasn’t documented in the case?-&gt;Booth Answer2]]
 
-[[What was your relation to the murder victim Alfred? I heard he was not the greatest of people when it came to treating his employees-&gt;Booth Answer6]]</tw-passagedata><tw-passagedata pid="78" name="Booth Answer2" tags="" position="2011.3333333333333,2489.3333333333335" size="100,100">jeremiah: I was up on the balcony, that&#39;s where I like to go for some peace and quite.
+[[What was your relation to the murder victim Alfred? I heard he was not the greatest of people when it came to treating his employees-&gt;Booth Answer6]]</tw-passagedata><tw-passagedata pid="77" name="Booth Answer2" tags="" position="2458,2463.6666666666665" size="100,100">jeremiah: I was up on the balcony, that&#39;s where I like to go for some peace and quite.
 
 [[That’s it? Fair enough I suppose that wouldn’t hold up in court anyways.-&gt; Booth Answer3]]
 
 [[Player: That is all you seen on the night? surely a man of your position hears and sees throught the walls of this place? tell me what happened-&gt; Booth Answer4]]
-</tw-passagedata><tw-passagedata pid="79" name=" Booth Answer3" tags="" position="1772,2703.3333333333335" size="100,100">jeremiah: Actually I’m not usually the person to do this but you seem like you want to make a change in this place. On the night of the murder, on that night Edward Shank.. as you probably know the prime suspect &amp; I shared a smoke up on that balcony.
+</tw-passagedata><tw-passagedata pid="78" name=" Booth Answer3" tags="" position="2278.3333333333335,2625.3333333333335" size="100,100">jeremiah: Actually I’m not usually the person to do this but you seem like you want to make a change in this place. On the night of the murder, on that night Edward Shank.. as you probably know the prime suspect &amp; I shared a smoke up on that balcony.
 
 I gave that information to the police but they wouldn&#39;t listen, it seemed as if they had some sort of hidden agenda. I hope that gives you something to work with don&#39;t trust everying you see in the reports kid.
 
 &#39;&#39;Booth will remember that you listened toi his side of the story.&#39;&#39;
 
-(set: $hasMetJeremiah to 1)
-(set: $jeremiahOpinion is true)
+(set: $hasMetJeremiah to true)
+(set: $jeremiahOpinion to true)
 [[Return to reception-&gt;reception]]
 &#39;&#39;Notebook updated&#39;&#39;
 [[Open Notebook-&gt;open notebook]]
-</tw-passagedata><tw-passagedata pid="80" name=" Booth Answer4" tags="" position="2154.3333333333335,2656" size="100,100">jeremiah: Yeah I did see something that night but it wasn&#39;t a big deal the cops didn&#39;t believe me and neither would you..
+</tw-passagedata><tw-passagedata pid="79" name=" Booth Answer4" tags="" position="2484.3333333333335,2612.3333333333335" size="100,100">jeremiah: Yeah I did see something that night but it wasn&#39;t a big deal the cops didn&#39;t believe me and neither would you..
 
 [[Dont hide anything from me, tell me now!-&gt; Booth Answer5]]
 
-[[Hey, I&#39;m on your side I&#39;m just trying to get to the bottom of this case. I&#39;ll listen to what everyone has to say-&gt; Booth Answer3]]</tw-passagedata><tw-passagedata pid="81" name=" Booth Answer5" tags="" position="2090,2805.6666666666665" size="100,100">jeremiah: Okay okay I&#39;ll tell you what you want but just stop harrasing me?
+[[Hey, I&#39;m on your side I&#39;m just trying to get to the bottom of this case. I&#39;ll listen to what everyone has to say-&gt; Booth Answer3]]</tw-passagedata><tw-passagedata pid="80" name=" Booth Answer5" tags="" position="2420.3333333333335,2761.3333333333335" size="100,100">jeremiah: Okay okay I&#39;ll tell you what you want but just stop harrasing me?
 
 On the night of the murder, I was with the main suspect Edward Shank, we shared a cigerette on the balcony above the garden, I told the cops about this already but you wont find it in the reports, they didn&#39;t believe me. That was it. If you think that&#39;s worth your time there you go now leave me alone. Please!
 
 &#39;&#39;Booth will remember how you acted&#39;&#39;
 
-(set: $hasMetJeremiah to 1)
+(set: $hasMetJeremiah to true)
 (set: $jeremiahOpinion is false)
 [[Your motives as specified in the case brief say that you had a great hatred for Albert can you explain yourself?-&gt;Booth Answer8]]
 [[Return to reception-&gt;reception]]
 &#39;&#39;Notebook updated&#39;&#39;
-[[Open Notebook-&gt;open notebook]]</tw-passagedata><tw-passagedata pid="82" name="Booth Answer6" tags="" position="1492.6666666666667,2542.666666666667" size="100,100">jeremiah: Don&#39;t get me wrong in my opinion, Alfred was a bad person but people exaggerated over how they were treated here at the resort.
+[[Open Notebook-&gt;open notebook]]</tw-passagedata><tw-passagedata pid="81" name="Booth Answer6" tags="" position="2014,2465" size="100,100">jeremiah: Don&#39;t get me wrong in my opinion, Alfred was a bad person but people exaggerated over how they were treated here at the resort.
 
 Don&#39;t you think I would have left and not stayed all these years? 
 
-[[Wasn&#39;t that the reason you were a suspect to begin with? Sources say that you did hate the man-&gt;Booth Answer7]]</tw-passagedata><tw-passagedata pid="83" name="Booth Answer7" tags="" position="1573,2702" size="100,100">jeremiah: Your sources are wrong! I should have never been in this mess from the start. It all got pinned on me at the begining of the investigation.. &quot;I did it in hate for the man&quot;, &quot;I did it for the money&quot;, &quot;I did it because I&#39;m insane&quot; do you know how hard it was to me a man of my background living in the 1950&#39;s? 
+[[Wasn&#39;t that the reason you were a suspect to begin with? Sources say that you did hate the man-&gt;Booth Answer7]]</tw-passagedata><tw-passagedata pid="82" name="Booth Answer7" tags="" position="2093.3333333333335,2625" size="100,100">jeremiah: Your sources are wrong! I should have never been in this mess from the start. It all got pinned on me at the begining of the investigation.. &quot;I did it in hate for the man&quot;, &quot;I did it for the money&quot;, &quot;I did it because I&#39;m insane&quot; do you know how hard it was to me a man of my background living in the 1950&#39;s? 
 
 Your generation has it much easier now
-(set: $hasMetJeremiah to 1)
-[[I&#39;m sorry-&gt; Booth Answer1]]</tw-passagedata><tw-passagedata pid="84" name="Booth Answer8" tags="" position="2047,2964" size="100,100">jeremiah: That was all lies, I never hated the man enough to kill him! Yes he mistreated his staff, yes people have quit in the past due to how he was with them but did he deserve to die? that&#39;s gods decision to make not mine.
+(set: $hasMetJeremiah to true)
+[[I&#39;m sorry-&gt; Booth Answer1]]</tw-passagedata><tw-passagedata pid="83" name="Booth Answer8" tags="" position="2415.6666666666665,2922" size="100,100">jeremiah: That was all lies, I never hated the man enough to kill him! Yes he mistreated his staff, yes people have quit in the past due to how he was with them but did he deserve to die? that&#39;s gods decision to make not mine.
 
 *You can see genuine anger in jeremiahs eye&#39;s. Is it the type of anger that could kill a man? Or has he been tormented all these years after the murder by those accusations as an innocent man..*
 
-[[Goodbye Mr. Booth I&#39;ll be keeping in touch.-&gt;reception]]</tw-passagedata><tw-passagedata pid="85" name="Tell him why you are here" tags="" position="1097,1295" size="100,100">//&quot;Ah, so you&#39;re here to solve this mystery once and for all, eh? That is great!
+[[Goodbye Mr. Booth I&#39;ll be keeping in touch.-&gt;reception]]</tw-passagedata><tw-passagedata pid="84" name="Tell him why you are here" tags="" position="1097,1295" size="100,100">//&quot;Ah, so you&#39;re here to solve this mystery once and for all, eh? That is great!
 	
 	I am Alfred Jones. I murdered in this very office years ago.
 	
@@ -530,7 +532,7 @@ Your generation has it much easier now
 	My spirit has been stuck on this earth ever since. I&#39;ve been forced to watch that useless trial unfold, and to watch Shank live into old age as a free man. Even worse, the souls of the others who were residents at the resort at the time of the murder are stuck on this island as well. We&#39;re all prevented from enjoying the afterlife because of the fact that the case was never fully solved, and the culprit was never caught.&quot;//
 	
 	//[[&quot;Why do you think it was Edward Shank?&quot;]]//
-	//[[&quot;There are other spirits here?&quot;]]//</tw-passagedata><tw-passagedata pid="86" name="&quot;Why do you think it was Edward Shank?&quot;" tags="" position="1022,1445" size="100,100">//&quot;Was that meant to be a joke? You do know about the case right?
+	//[[&quot;There are other spirits here?&quot;]]//</tw-passagedata><tw-passagedata pid="85" name="&quot;Why do you think it was Edward Shank?&quot;" tags="" position="1022,1445" size="100,100">//&quot;Was that meant to be a joke? You do know about the case right?
 
 All the signs point that lispy fool. The jewellery that he stole from the office was found in his room. Not only that, but he had come here to negotiate a possible merger with me. This meeting quickly turned into a heated argument, and he stormed off declaring //&quot;You&#39;ll regret this, Jones&quot;//. I&#39;ve never seen a man so angry. //pfft//, as if I&#39;d give a single percent of this resort to that bald-headed oaf.
 
@@ -545,7 +547,7 @@ I don&#39;t remember the events of the murder, but the evidence clearly points t
 (if: $alfred_q1_asked and $alfred_q2_asked)[
 	(show: ?end_convo)
 ]
-}</tw-passagedata><tw-passagedata pid="87" name="&quot;There are other spirits here?&quot;" tags="" position="1172,1445" size="100,100">//&quot;Yes, the others who were holidaying here during the time of the murder went on to live their own lives afterwards, but their souls have returned here after their respective lives have ended.
+}</tw-passagedata><tw-passagedata pid="86" name="&quot;There are other spirits here?&quot;" tags="" position="1172,1445" size="100,100">//&quot;Yes, the others who were holidaying here during the time of the murder went on to live their own lives afterwards, but their souls have returned here after their respective lives have ended.
 
 Since Edward was never prosecuted with absolute, undoubtable evidence, none of their names have been cleared of any suspicion. They are effectively stuck here in limbo until they can be proven innocent.
 
@@ -559,28 +561,31 @@ You must help us get to the bottom of this, and hold Edward responsible once and
 (if: $alfred_q1_asked and $alfred_q2_asked)[
 	(show: ?end_convo)
 ]
-</tw-passagedata><tw-passagedata pid="88" name="statue" tags="" position="947,1595" size="100,100">You pick up the statue and examine it. You recall pictures of Alfred&#39;s body which have circulated since the murder. In particular, the sizeable dent on the back of the deceased&#39;s head, which seems to match the size of the statue reasonably well.
+</tw-passagedata><tw-passagedata pid="87" name="statue" tags="" position="947,1595" size="100,100">You pick up the statue and examine it. You recall pictures of Alfred&#39;s body which have circulated since the murder. In particular, the sizeable dent on the back of the deceased&#39;s head, which seems to match the size of the statue reasonably well.
 
 There seems to be no indication of a head-smashing on Mr. Jones&#39; ghostly reincarnation. Thank goodness, that wouldn&#39;t be the most pleasant sight in-person (...or in-ghost?)
 
 [[Put the statue down-&gt;&quot;Why do you think it was Edward Shank?&quot;]]
-</tw-passagedata><tw-passagedata pid="89" name="&quot;I will do my best. Thank you&quot;" tags="" position="1099,1595" size="100,100">You leave the office behind. You decide to head out and try and find these other spirits for more clues.
+</tw-passagedata><tw-passagedata pid="88" name="&quot;I will do my best. Thank you&quot;" tags="" position="1099,1595" size="100,100">You leave the office behind. You decide to head out and try and find these other spirits for more clues.
 
-[[Continue|Act II]]</tw-passagedata><tw-passagedata pid="90" name="Act II" tags="" position="1099,1745" size="100,100">(transition: &quot;dissolve&quot;)[Act II
+[[Continue|Act II]]</tw-passagedata><tw-passagedata pid="89" name="Act II" tags="" position="1099,1745" size="100,100">(transition: &quot;dissolve&quot;)[Act II
 
-[[Continue|reception]]]</tw-passagedata><tw-passagedata pid="91" name="&quot;Are you Jason?&quot;" tags="" position="1257,2221" size="100,100">Although he seems to be in a trance, he is aware of your presence and answers you with a to-the-point response.
+[[Continue|reception]]]</tw-passagedata><tw-passagedata pid="90" name="&quot;Are you Jason?&quot;" tags="" position="1602.3333333333333,2218.6666666666665" size="100,100">Although he seems to be in a trance, he is aware of your presence and answers you with a to-the-point response.
 	
 	//&quot;Yeah, that&#39;s me.&quot;//
 	
 	He doesn&#39;t seem that interested in conversation, but you need his input for the investigation.
 	
-	//[[&quot;Where were you on the night of Alfred&#39;s Murder?&quot;]]//.</tw-passagedata><tw-passagedata pid="92" name="&quot;Where were you on the night of Alfred&#39;s Murder?&quot;" tags="" position="1260,2353" size="100,100">	//&quot;I was right here. I came to this resort to take a break from life and just be by myself. This is where I spent most of my time at this resort. It&#39;s quiet, and nobody else ever bothers me. 
+	//[[&quot;Where were you on the night of Alfred&#39;s Murder?&quot;]]//.</tw-passagedata><tw-passagedata pid="91" name="&quot;Where were you on the night of Alfred&#39;s Murder?&quot;" tags="" position="1605.3333333333333,2350.6666666666665" size="100,100">	//&quot;I was right here. I came to this resort to take a break from life and just be by myself. This is where I spent most of my time at this resort. It&#39;s quiet, and nobody else ever bothers me. 
 	
 	After I died, I got stuck here along with the others. It seems that we can&#39;t leave this world until all our names are cleared. I don&#39;t mind it, though. This place is calm, and I&#39;ve had a lot more time by myself to just think.
 	
 	If you don&#39;t mind, I&#39;d like to be left alone.&quot;//
 	
-	It doesn&#39;t seem like you&#39;re going to get much more information out of Jason, but he at least told you his alibi. You keep a note of it and [[leave]].</tw-passagedata><tw-passagedata pid="93" name="leave" tags="" position="1182,2485" size="100,100">You start heading back from [[where you came|reception]]</tw-passagedata><tw-passagedata pid="94" name="edward saw" tags="" position="872,2381" size="100,100">&quot;No you imp, I was at the bar the whole night drinking...&quot;
+	It doesn&#39;t seem like you&#39;re going to get much more information out of Jason, but he at least told you his alibi. You keep a note of it and [[leave]].</tw-passagedata><tw-passagedata pid="92" name="leave" tags="" position="1527.3333333333333,2484.333333333333" size="100,100">You start heading back from [[where you came|reception]]
+{
+(set: $hasMetJason to true)
+}</tw-passagedata><tw-passagedata pid="93" name="edward saw" tags="" position="470.3333333333333,2431.3333333333335" size="100,100">&quot;No you imp, I was at the bar the whole night drinking...&quot;
 
 &quot;Why would I waste my time caring about other people&#39;s affairs!&quot; he growled.
 
@@ -588,7 +593,7 @@ Something tells you that those mannerisms were not a lie, Edward truly didn&#39;
 
 Edward starts the scratch his head, aggitated.
 
-You [[question him-&gt;question edward]] about it.</tw-passagedata><tw-passagedata pid="95" name="question edward" tags="" position="890,2554" size="100,100">Edward shows you the back of his head, revealing a nasty dent.
+You [[question him-&gt;question edward]] about it.</tw-passagedata><tw-passagedata pid="94" name="question edward" tags="" position="540,2597.3333333333335" size="100,100">Edward shows you the back of his head, revealing a nasty dent.
 
 You ask him how he got it and he tells you it&#39;s the way in which he died.
 
@@ -598,7 +603,7 @@ You ask him how he got it and he tells you it&#39;s the way in which he died.
 
 [[Ask about alibi-&gt;edward alibi]] 
 [[Return to reception-&gt;reception]]
-[[Open Notebook-&gt;open notebook]]</tw-passagedata><tw-passagedata pid="96" name="question Edward 2" tags="" position="700,2317" size="100,100">&quot;When I returned to my room that night, there was a briefcase lying under bed.&quot;
+[[Open Notebook-&gt;open notebook]]</tw-passagedata><tw-passagedata pid="95" name="question Edward 2" tags="" position="552,2276.6666666666665" size="100,100">&quot;When I returned to my room that night, there was a briefcase lying under bed.&quot;
 &quot;When I opened it was full of these marvellous rubys and diamonds, jewelry galore.&quot;
 
 &quot;I knew it was a setup, those bastards got me.&quot; he said &quot;two minutes later my room was full of police.&quot; he shouted, still bitter.
@@ -607,23 +612,23 @@ You ask him how he got it and he tells you it&#39;s the way in which he died.
 
 [[Did you see anything that night?-&gt;edward saw]]
 [[So where were you that night then?-&gt;edward alibi]]
-(set: $hasMetEdward to 1)</tw-passagedata><tw-passagedata pid="97" name="Prosecute Whitworth" tags="" position="1660,94" size="100,100">&quot;How could you think that!?&quot; Kenny shouts.
+(set: $hasMetEdward to true)</tw-passagedata><tw-passagedata pid="96" name="Prosecute Whitworths" tags="" position="1014.6666666666665,5405.333333333334" size="100,100">&quot;How could you think that!?&quot; Kenny shouts.
 
 &quot;You&#39;ve damned for another fucking year, you fool!&quot;
 
 You notice Lyla start to sob uncontrolably, the tension on the room has gotten considerably thicker.
 
-[[Press forward with proseuction]]</tw-passagedata><tw-passagedata pid="98" name="Press forward with proseuction" tags="" position="1658,244" size="100,100">Suddenly a mist in the room starts to appear, similar to that which has taken the island.
+[[Press forward with proseuction]]</tw-passagedata><tw-passagedata pid="97" name="Press forward with proseuction" tags="" position="1010.6666666666667,5536.666666666667" size="100,100">Suddenly a mist in the room starts to appear, similar to that which has taken the island.
 
-It slowely starts to cover the fragile figures of the ghosts, you stare at the figures as they&#39;re absorbed by the mist.
+It slowly starts to cover the fragile figures of the ghosts, you stare at the figures as they&#39;re absorbed by the mist.
 
-You notice, just as the mist fully submerges the ghosts, Jason&#39;s mouth start to curl in the shape of a smirk. Then poof, [[they&#39;re gone-&gt;aftermath]]</tw-passagedata><tw-passagedata pid="99" name="aftermath" tags="" position="1660,394" size="100,100">The mist settles and everyone has disappears, you make your way out of the resort and back outside.
+You notice, just as the mist fully submerges the ghosts, Jason&#39;s mouth start to curl in the shape of a smirk. Then poof, [[they&#39;re gone-&gt;aftermath]]</tw-passagedata><tw-passagedata pid="98" name="aftermath" tags="" position="1006.6666666666665,5685.333333333334" size="100,100">The mist settles and everyone has disappeared, you make your way out of the resort and back outside.
 
 You notice that the mist on the island has gotten considerably stronger and darker since arriving.
 
 You meet your escort who greets you with a sinister smile, making you more uncomfortable than ever. Doubt crosses your mind.
 
-The two of you make your way [[towards the dock]].</tw-passagedata><tw-passagedata pid="100" name="towards the dock" tags="" position="1660,544" size="100,100">You arrive at the dock, the winds howling against the sea, the tides are high.
+The two of you make your way [[towards the dock]].</tw-passagedata><tw-passagedata pid="99" name="towards the dock" tags="" position="1003.3333333333333,5825.666666666668" size="100,100">You arrive at the dock, the winds howling against the sea, the tides are high.
 
 The captain greets you and ushers you onto the boat.
 
@@ -635,8 +640,8 @@ The captain greets you and ushers you onto the boat.
 
 &quot;Come on, let&#39;s get you something to eat.&quot;
 
-THE END</tw-passagedata><tw-passagedata pid="101" name="press couple for more" tags="" position="3443,2594" size="100,100">Lyla looks horrified at the thought of you accusing her and says{
-(if: $pressedJason is true)[
+//THE END?//</tw-passagedata><tw-passagedata pid="100" name="press couple for more" tags="" position="1099.333333333333,4624.333333333333" size="100,100">Lyla looks horrified at the thought of you accusing her and says{
+(if: $pressedJason)[
  &quot;We have told you all we know, you would be stupid to think it was us! He is the one who murdered Alfrid!! Hes a lier!!&quot;,
 ]
 (else:)[
@@ -645,47 +650,48 @@ THE END</tw-passagedata><tw-passagedata pid="101" name="press couple for more" t
 } Kenny looks defeated and mutters“Maybe we should just tell them Lyla..”. Lyla shouts “Are you stupid, we had nothing to do with ...” but Kenny buts in with “They all think its us anyway”. There&#39;s a pause. Everyone has a look of shock and happiness on there faces. Then Kenny reluctantly says “We were stealing the hidden gold in the garden. We had heard of it before and I was going too dig it up and steal it. That&#39;s where we were at the time.” Everyone loses the look of happiness when they realize he was not confessing. Lyla and Kenny look ashamed.
 
 [[So how did you know about this?-&gt;press couple 2]]
-[[So that&#39;s why you were leaving Lyla?-&gt;press couple 3]]</tw-passagedata><tw-passagedata pid="102" name="who to press for more" tags="" position="3536,2154" size="100,100">[[Lyla and Kenny, yere alabi can not really be proven. Ye say ye were at the beach but also that Kenny kept walking off. What are ye hiding from us?-&gt;press couple for more]]
-[[Jason you don&#39;t even have an alibi, no one saw you! What are you hiding?-&gt;press jason for more]]</tw-passagedata><tw-passagedata pid="103" name="press jason for more" tags="" position="3713,2196" size="100,100">Jason starts to get flustered and says &quot;Me? I had nothing to do with any of this!! I don&#39;t even know why I am here!&quot;.
+[[So that&#39;s why you were leaving Lyla?-&gt;press couple 3]]</tw-passagedata><tw-passagedata pid="101" name="who to press for more" tags="" position="1104.6666666666665,4041.9999999999995" size="100,100">//[[&quot;Lyla and Kenny, yere alabi can not really be proven. Ye say ye were at the beach but also that Kenny kept walking off. What are ye hiding from us?&quot;-&gt;press couple for more]]//
+//[[&quot;Jason you don&#39;t even have an alibi, no one saw you! What are you hiding?&quot;-&gt;press jason for more]]//</tw-passagedata><tw-passagedata pid="102" name="press jason for more" tags="" position="1292,4200.333333333333" size="100,100">Jason starts to get flustered and says &quot;Me? I had nothing to do with any of this!! I don&#39;t even know why I am here!&quot;.
 
-[[Well if it was not you then who!?-&gt;press jason for more 2]]</tw-passagedata><tw-passagedata pid="104" name="press couple 2" tags="" position="3326,2779" size="100,100">Kenny says &quot;It was a rumor I had heard of. I was not sure it would actually be here but the rumor says that Alfred hid a “Rainy day” stash of gold for a time when he might need to flee. The rumor  tells of it being buried under a berry bush. I walked all over this island looking under every berry bush.&quot; Lyla interrupts saying angrily “Ya I noticed!!&quot;.
+[[Well if it was not you then who!?-&gt;press jason for more 2]]</tw-passagedata><tw-passagedata pid="103" name="press couple 2" tags="" position="1018.6666666666666,4784.333333333333" size="100,100">Kenny says &quot;It was a rumor I had heard of. I was not sure it would actually be here but the rumor says that Alfred hid a “Rainy day” stash of gold for a time when he might need to flee. The rumor  tells of it being buried under a berry bush. I walked all over this island looking under every berry bush.&quot; Lyla interrupts saying angrily “Ya I noticed!!&quot;.
 
 [[So that&#39;s why you were leaving Lyla?-&gt;press couple 3]]
 [[So how did you find it Kenny?-&gt;press couple 4]]
-</tw-passagedata><tw-passagedata pid="105" name="press couple 3" tags="" position="3566,2769" size="100,100">Lyla says &quot;Yes! And for the record I had nothing to do with his stealing!! I only found out by following him so I had nothing to do with any of this!&quot; but then Kenny says &quot;Bullshit! You did not know at the time but you had no problem talking the money in the divorce. The money I stole from this very island!!&quot;. Lyla looks so frustrated and shouts “I had nothing to do with how you got that money that&#39;s on you!! I was thinking of our kids!”. Kenny smirks angrily saying &quot;We all know who you were thinking of!&quot;. Lyla looks disappointed in herself, seems like she regrets taking the money.
+</tw-passagedata><tw-passagedata pid="104" name="press couple 3" tags="" position="1171,4783.666666666667" size="100,100">Lyla says &quot;Yes! And for the record I had nothing to do with his stealing!! I only found out by following him so I had nothing to do with any of this!&quot; but then Kenny says &quot;Bullshit! You did not know at the time but you had no problem talking the money in the divorce. The money I stole from this very island!!&quot;. Lyla looks so frustrated and shouts “I had nothing to do with how you got that money that&#39;s on you!! I was thinking of our kids!”. Kenny smirks angrily saying &quot;We all know who you were thinking of!&quot;. Lyla looks disappointed in herself, seems like she regrets taking the money.
 
 [[So how did you know about this?-&gt;press couple 2]]
 [[So how did you find it Kenny?-&gt;press couple 4]]
-</tw-passagedata><tw-passagedata pid="106" name="press couple 4" tags="" position="3326,2915" size="100,100">Kenny says &quot;I was starting to give up on finding it and with this one breathing down my neck I was thinking of just giving up” and Lyla mumbles &quot;Like you give up on everything.&quot;. Kenny gives her a look but continues &quot;I happened to see a small berry bush at the very back of the garden. It was the only one there. So when the place was a little less active I made my way over and got the gold. I stole from Alfrid but I did not murder him and Lyla did not either. After digging it up she approached me. She saw me do it and she did not know about our financial troubles until then. So were innocent ok!&quot;. Kenny looks defeated and Lyla says &quot;He&#39;s telling the truth, we had nothing to do with the murder.&quot;
+</tw-passagedata><tw-passagedata pid="105" name="press couple 4" tags="" position="998.3333333333333,4938.666666666667" size="100,100">Kenny says &quot;I was starting to give up on finding it and with this one breathing down my neck I was thinking of just giving up” and Lyla mumbles &quot;Like you give up on everything.&quot;. Kenny gives her a look but continues &quot;I happened to see a small berry bush at the very back of the garden. It was the only one there. So when the place was a little less active I made my way over and got the gold. I stole from Alfrid but I did not murder him and Lyla did not either. After digging it up she approached me. She saw me do it and she did not know about our financial troubles until then. So were innocent ok!&quot;. Kenny looks defeated and Lyla says &quot;He&#39;s telling the truth, we had nothing to do with the murder.&quot;
 {
-(if: $jeremiahOpinion is true)[
+(if: $jeremiahOpinion)[
 Jeremiah looks like he just learnt something and then says &quot;Wait&quot; but then pauses for a bit and says &quot;I can back them up on that story&quot;
 
 [[Please tell us-&gt;janitor helps couple]]
 ]
 }
-[[I have heard enough-&gt;pick someone]]</tw-passagedata><tw-passagedata pid="107" name="janitor helps couple" tags="" position="3513,2939" size="100,100">He clears his throat and says &quot;Well the next day the garden was dug up around the berry bush at the back. I remember this. It was very strange but I assumed the police had done it. I think there telling the truth.&quot; Lyla says &quot;Yes! See we had nothing to do with any of this!!&quot;. Kenny says with a smile “You see were good people. We would never murder someone!”.
+[[I have heard enough-&gt;pick someone]]</tw-passagedata><tw-passagedata pid="106" name="janitor helps couple" tags="" position="999.6666666666663,5087" size="100,100">He clears his throat and says &quot;Well the next day the garden was dug up around the berry bush at the back. I remember this. It was very strange but I assumed the police had done it. I think they&#39;re telling the truth.&quot; Lyla says &quot;Yes! See we had nothing to do with any of this!&quot;. Kenny says with a smile “You see we&#39;re good people. We would never murder someone!”.
 
-[[I have heard enough-&gt;pick someone]]</tw-passagedata><tw-passagedata pid="108" name="pick someone" tags="" position="3836,2942" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="109" name="press jason for more 2" tags="" position="3711,2344" size="100,100">Jason gets angry and says &quot;It was them!&quot; and point at Kenny and Lyla. They both looked shocked and Lyla shouts &quot;Who do you think you are, blaming me!!!&quot;.
+[[I have heard enough-&gt;pick someone]]</tw-passagedata><tw-passagedata pid="107" name="pick someone" tags="" position="1140.6666666666665,5229" size="100,100">You stand before the two suspicious parties: the Whitworth couple and Jason Price. You have gathered all the evidence that you can, and it is now time for the prosecution.
+
+Who killed Alfred Jones?
+
+//[[&quot;It was you two, Whitworths&quot;|Prosecute Whitworths]]//
+//[[&quot;It was you, Jason Price&quot;|Prosecute Jason Price]]//</tw-passagedata><tw-passagedata pid="108" name="press jason for more 2" tags="" position="1290.3333333333333,4326" size="100,100">Jason gets angry and says &quot;It was them!&quot; and point at Kenny and Lyla. They both looked shocked and Lyla shouts &quot;Who do you think you are, blaming me!!!&quot;.
 
 [[Tell Lyla to stop-&gt;press jason for more 3]]
-[[Leave Lyla continue-&gt;press jason for more 4]]</tw-passagedata><tw-passagedata pid="110" name="press jason for more 3" tags="" position="3648,2502" size="100,100">Lyla scouls and Jason continues &quot;I seen Kenny walking up the path from the beach to the garden that evening and then Lyla was sneaking up after him. They were up to something I know it!!&quot;. Lyla shouts &quot;Lies!!!&quot; at him but Kenny looks nervous.
+[[Leave Lyla continue-&gt;press jason for more 4]]</tw-passagedata><tw-passagedata pid="109" name="press jason for more 3" tags="" position="1250.3333333333333,4469" size="100,100">Lyla scouls and Jason continues &quot;I seen Kenny walking up the path from the beach to the garden that evening and then Lyla was sneaking up after him. They were up to something I know it!!&quot;. Lyla shouts &quot;Lies!!!&quot; at him but Kenny looks nervous.
 
-[[Care to explain Lyla and Kenny.-&gt;press couple for more]]</tw-passagedata><tw-passagedata pid="111" name="press jason for more 4" tags="" position="3763,2607" size="100,100">Lylay continues &quot;You little murder!! I know you done it! What you just wanted to know how it feels?! If you were not already dead I would kill you myself!!&quot;. Kenny stops her by shouting &quot;Stop!&quot;. Ther is a long silence.
+[[Care to explain Lyla and Kenny.-&gt;press couple for more]]</tw-passagedata><tw-passagedata pid="110" name="press jason for more 4" tags="" position="1376.3333333333333,4469" size="100,100">Lylay continues &quot;You little murder!! I know you done it! What you just wanted to know how it feels?! If you were not already dead I would kill you myself!!&quot;. Kenny stops her by shouting &quot;Stop!&quot;. Ther is a long silence.
 
-[[Care to explain Lyla and Kenny.-&gt;press couple for more]]</tw-passagedata><tw-passagedata pid="112" name="jeremiah Testify" tags="" position="3295,1608" size="100,100">*The room echos from your roar, you have got everyone in rooms attention. Something doesn&#39;t add up.*
-
-&quot;Jeremiah, you had no alibi in the case, yet you were never considered the key suspect. Could you explain to the room why that was?&quot;
+[[Care to explain Lyla and Kenny.-&gt;press couple for more]]</tw-passagedata><tw-passagedata pid="111" name="&quot;Jeremiah, you had no alibi in the case, yet you were never considered as a suspect. Could you explain to the room why that was?&quot;" tags="" position="1094.6666666666665,3317.3333333333326" size="100,100">Everyone stops disputing to listen to what you have to say.
 
 jeremiah: I&#39;ve explained this before.. no one ever listened to what I had to say that night. There was something up with the police they took no notice to my side of the story on what I seen that night.
 I can vouch for Edward, at the time of the murder I was out on the balcony and at the time I didn&#39;t know much at all about the man but he was there too.
 
-[[Is that true Edward-&gt; question Edward]]</tw-passagedata><tw-passagedata pid="113" name=" question Edward" tags="" position="3295,1758" size="100,100">edward: I said this to the cops but they wouldn&#39;t listen! It was a set up!
-Like I said after that large bang that everyone heard that night we were all told to head back to our rooms. I walked straight back to my room and once I got there the cops were ransacing my room, apperantly there was a stash of cash they found there I had no idea of.
+//[[&quot;Is that true, Edward?&quot;-&gt; question Edward]]//</tw-passagedata><tw-passagedata pid="112" name=" question Edward" tags="" position="1096,3500.6666666666665" size="100,100">//&quot;I said this to the cops but they wouldn&#39;t listen! It was a set up!
+Like I said after that large bang that everyone heard that night we were all told to head back to our rooms. I walked straight back to my room and once I got there the cops were ransacing my room, apperantly there was a stash of cash they found there I had no idea of. [[Next thing I know, I&#39;m at the station.-&gt; question Edward2]]&quot;//</tw-passagedata><tw-passagedata pid="113" name=" question Edward2" tags="" position="1098.3333333333333,3677" size="100,100">*As Edward is rambling on about how he was a victim in this story, I recall him talking about his head. Is that how it works for the dead? are their incorporeal formed from how they died?*
 
-[[Next thing I know I&#39;m at the station.-&gt; question Edward2]]</tw-passagedata><tw-passagedata pid="114" name=" question Edward2" tags="" position="3295,1908" size="100,100">*As Edward is rambling on about how he was a victim in this story, I recall him talking about his head. Is that how it works for the dead? are their incorporeal formed from how they died?*
-
-[[Alfred, I appologise for asking this but why isn&#39;t you head uhm, smashed in?-&gt; Alfred Question]]</tw-passagedata><tw-passagedata pid="115" name=" Alfred Question" tags="" position="3295,2058" size="100,100">alfred: Oh, hmmm I&#39;m not sure actually I was sure that I was.. it&#39;s all a bit foggy for me that whole incident..
+//[[&quot;Alfred, I apologise for asking this but why isn&#39;t your head uhm, smashed in?&quot;-&gt; Alfred Question]]//</tw-passagedata><tw-passagedata pid="114" name=" Alfred Question" tags="" position="1102.3333333333333,3852.6666666666665" size="100,100">alfred: Oh, hmmm I&#39;m not sure actually I was sure that I was.. it&#39;s all a bit foggy for me that whole incident..
 
 *Edward butts in*
 
@@ -697,7 +703,126 @@ edward: It wasn&#39;t foggy for me at all, I and I felt it.
 
 Alfred: I think you might be right, after all these years of being so sure it was Edward that commited the murder.. I&#39;m not sure what I think anymore.
 
-[[It seems like there is more to this case than meets the eye-&gt;who to press for more]]</tw-passagedata></tw-storydata>
+[[It seems like there is more to this case than meets the eye-&gt;who to press for more]]</tw-passagedata><tw-passagedata pid="115" name="Prosecute Jason Price" tags="" position="1392.333333333333,5395.333333333333" size="100,100">The Whitworths sigh in relief. You notice as you look around that everyone else looked like they had come to the same conclusion. Jason emits visible signs of discomfort as the attention is suddenly shifted in his direction. Unwilling to lay down and accept his sentencing, he retaliates:
+
+	//“Ridiculous!”, he shouts. “How could I have [[poisoned]] Alfred? I was sitting on the bench on the forest trail the entire night!”.//</tw-passagedata><tw-passagedata pid="116" name="poisoned" tags="" position="1392.9999999999998,5540.333333333332" size="100,100">With that, the entire party lets out a gasp and takes a step back in surprise. Everyone except for Jason at least, who is unaware of the grave blunder he has made until Jerimiah breaks the silence:
+
+	//“Who accused you of poisoning, Jason?”//
+
+	Jason’s expression turns from a defensive one, to a defeated one. His tough exterior breaks down and his face acts as a visible indicator of the decreasing levels of hope that he is feeling. Just like that, The trial has effectively ended, with Jason as the guaranteed culprit after his accidental confession.
+	
+	//[[&quot;What do you have to say, Jason?&quot;]]//</tw-passagedata><tw-passagedata pid="117" name="&quot;What do you have to say, Jason?&quot;" tags="" position="1395.333333333333,5691" size="100,100">Jason stands there silently, as if unable to refute the overwhelming evidence that has been presented against him. Eventually, he drops his shoulders and lets out a defeated sigh.
+	
+	//&quot;I guess I&#39;ve been found out after all this time&quot;//, He utters.
+	//&quot;Yes, I killed Alfred Jones in this resort in 19XX. I suppose I might as well give you guys an explanation, seeing as now the gig is up.&quot;//
+	
+	//[[&quot;Why did you kill Alfred Jones&quot;]]//</tw-passagedata><tw-passagedata pid="118" name="&quot;Why did you kill Alfred Jones&quot;" tags="" position="1398.333333333333,5841.333333333334" size="100,100">	//&quot;Because he had it coming.&quot;//
+	
+	Jason turns to Alfred.
+	
+	//&quot;I&#39;ve hated you since before my first memory&quot;//
+	
+	Alfred answers Jason in shock.
+	
+	//&quot;What are you talking about? I had never met you before you stepped foot on the island&quot;//
+	
+	//[[&quot;What do you mean, Jason?&quot;]]//</tw-passagedata><tw-passagedata pid="119" name="&quot;What do you mean, Jason?&quot;" tags="" position="1399.6666666666663,6022" size="100,100">Jason, straightens his back and looks at Alfred again, dead in the eye this time.
+	
+	//&quot;I&#39;m not actually Jason Smith. My name is Robert Jones, I am your son. You left me and my mother when I was four months old.&quot;//
+	
+	This bombshell left everyone speechless, especially Alfred, who seemed to turn pale, despite his already ghostly state.
+	
+	//&quot;Ever since you left us, we&#39;ve been living in poverty while you grew richer and fatter at this resort. My mother struggled everyday just so that we would have enough to eat. A few months before I attended the resort, she died of pneumonia, something which could have easily been treated if we had the money to do so. It was your fault that she died, so I came here to avenge her.&quot;//
+	
+	//[[&quot;How did you find Alfred?&quot;]]//
+	//[[&quot;How did you kill Alfred?&quot;]]//</tw-passagedata><tw-passagedata pid="120" name="&quot;How did you find Alfred?&quot;" tags="" position="1277.333333333333,6311.333333333333" size="100,100">	//&quot;An old friend of mine came back from his holidays on this resort, and swore he recognized the symbol on the manager&#39;s ring. After looking at it closer, he recognized that it was actually the crest of my mother&#39;s family. I did some research and found that it my long-lost father was running this resort.&quot;// 
+	
+	Alfred instinctively tucks his fingers behind one another, as if to hide the ring on his finger.
+	
+	//&quot;That&#39;s right&quot;//, proclaims Robert. //&quot;That is the ring you stole from my mother the night you left us, and it is ironically what has led me to you.&quot;//
+	
+	//[[&quot;How did you kill Alfred?&quot;]]//
+	[//[[&quot;That is all we need to know&quot;]]//](end_convo|
+{
+(set: $jason_confession_how_find_asked to true)
+(if: $jason_confession_how_find_asked and $jason_confession_how_kill_asked and $jason_confession_why_broken_glass_asked)[
+	(show: ?end_convo)
+]
+}</tw-passagedata><tw-passagedata pid="121" name="&quot;How did you kill Alfred?&quot;" tags="" position="1541.9999999999995,6318.999999999998" size="100,100">	//&quot;I poisoned him. I acquired some extremely deadly poison from someone I know in my home town. This poison will instantly and painlessley kill anyone who drinks it. I snuck into Alfred&#39;s office one night when he wasn&#39;t there, and slipped some into that bottle of brandy that he seems to love so much.&quot;//
+	
+	//[[&quot;How did you find Alfred?&quot;]]//
+	//[[&quot;What about the smashed glass and stolen jewellery?&quot;]]//
+	[//[[&quot;That is all we need to know&quot;]]//](end_convo|
+{
+(set: $jason_confession_how_kill_asked to true)
+(if: $jason_confession_how_find_asked and $jason_confession_how_kill_asked and $jason_confession_why_broken_glass_asked)[
+	(show: ?end_convo)
+]
+}</tw-passagedata><tw-passagedata pid="122" name="&quot;That is all we need to know&quot;" tags="" position="1404.9999999999995,6573.666666666666" size="100,100">	You start to notice the fog clearing up outside. It is clearing at a rate which would seem impossible naturally,  as if some spiritual force was dissipating it in response to the trial’s conclusion. You look around and notice that your ghostly peers are elated at the events that have unfolded. You are greeted by Alfred, for which you would assume to be the last time/
+
+	//“We cannot thank you enough for what you’ve done, my friend”. Finally we can be at peace after more than a lifetime of uncertainty on this case. Thank you for bringing us closure.”//
+
+	With that, Alfred smiles and raises his arms before disappearing. It is as if he was welcoming of whatever phenomenon is taking him away. You look around the room and the same happens with the souls of each other person. One by one, they are willingly transported to wherever lies beyond for them.
+
+	That is, with the exception of Robert, who is the sole spirit that is left behind. You make your way over to talk with him one more time.
+
+	//[[“You deserve to rot in hell for all you’ve done”]]//
+	//[[“I’m sorry that your father put you through all of this when you were a child, but I had to get to the bottom of this case and prosecute you.”]]//</tw-passagedata><tw-passagedata pid="123" name="&quot;What about the smashed glass and stolen jewellery?&quot;" tags="" position="1401.9999999999993,6186.666666666667" size="100,100">	//&quot;That was all a ruse. I had to pin the crime on somebody else if I were to have any chance of getting away with it. I carefully observed everyone and decided that Edward would be the most likely person to be motivated to kill Alfred. He was a rival businessman who had gotten in a heated argument the night Alfred died, so he seemed to be the most suitable candidate&quot;//
+	
+	//&quot;After Alfred died, I smashed the window, and hit alfred over the head with a statue in his office to make it look like a smash-and-grab attack. I also planted the briefcase full of jewellery in Edward&#39;s room&quot;//
+	
+	//&quot;I&#39;m sorry you had to live the rest of your life under suspicion, Edward.&quot;//
+	
+	//[[&quot;How did you kill Alfred?&quot;]]//
+	//[[&quot;How did you find Alfred?&quot;]]//
+	[//[[&quot;That is all we need to know&quot;]]//](end_convo|
+{
+(set: $jason_confession_why_broken_glass_asked to true)
+(if: $jason_confession_how_find_asked and $jason_confession_how_kill_asked and $jason_confession_why_broken_glass_asked)[
+	(show: ?end_convo)
+]
+}</tw-passagedata><tw-passagedata pid="124" name="“You deserve to rot in hell for all you’ve done”" tags="" position="1305.333333333333,6708.333333333333" size="100,100">Robert looks at you and scowls.
+
+	//“You think *I* deserve to rot in hell? That bastard father of mine left me and my mother in poverty, letting her die while he lived alone as a miser, hoarding his riches for himself”//
+
+	Robert sighs, relieving the tension and putting down his defence. He knows that it is too late to defend himself at this stage.
+
+	//“Not that it matters much anymore. You came here to solve the case, and you did. I suppose I should not scold you for that”//
+
+	//[[“What will you do now?”]]//</tw-passagedata><tw-passagedata pid="125" name="“I’m sorry that your father put you through all of this when you were a child, but I had to get to the bottom of this case and prosecute you.”" tags="" position="1504.9999999999995,6699.666666666666" size="100,100">	Robert slightly shakes his head and looks up at you.
+
+	//“Do not be sorry for bringing this case to its overdue conclusion. It is true that my father put me through hell, but in my quest for revenge I had to jeopardize the freedom of an innocent man, and put him under suspicion for the remainder of his life.”//
+
+	Robert seems to be attempting to make peace with the results of the case.
+
+	//“Thank you for finally freeing the souls of the innocent ones here. I had no right to bind them to this island by keeping silent.”//
+
+	//[[“What will you do now?”]]//
+</tw-passagedata><tw-passagedata pid="126" name="“What will you do now?”" tags="" position="1411.6666666666663,6849" size="100,100">	Robert lets out a melancholic smile.
+
+	“It is also time for *me* to leave. Although, I doubt that I am heading to the same place as the others”
+
+	Robert takes one last look around the reception where his spirit has lingered for so many years and makes an affirmative nodding gesture, as If he has finally accepted his fate. He turns away from you and starts walking. Just like the others, Robert starts vanishing with each step he takes. Unlike the others however, he does not seem as hopeful or joyous. He instead has the face of a man with deep regret and despair.
+	
+	[[continue]]</tw-passagedata><tw-passagedata pid="127" name="continue" tags="" position="1406.3333333333328,7013.333333333333" size="100,100">	He eventually dissolves entirely, leaving you alone in the reception. The case of Albert Jones’ murder has been solved, and the true culprit, although posthumously, has been tried. You make your way back to the boat, leaving the island behind, and with a story to tell.
+
+	THE END</tw-passagedata><tw-passagedata pid="128" name="trial" tags="" position="1098.6666666666667,2588.9999999999995" size="100,100">You feel that you’ve gathered all the evidence that you can, and decide that It is time to summon everyone for a trial. You revisit each area one more time and gather the suspects to uncover the mystery of this island [[once and for all]].</tw-passagedata><tw-passagedata pid="129" name="once and for all" tags="" position="1098.6666666666667,2753.9999999999995" size="100,100">You sit in the reception awaiting the arrival of the others. You can’t help but notice the fog that shadows the island getting thicker, as if it were somehow aware that the story of Albert’s murder was accelerating toward its overdue conclusion.
+
+After a few minutes, the room fills with a full party of suspects. You notice Alfred and Ed passing slight glances to one another. You sense that they normally keep their distance from one another, and that this is the first time in a while that they have seen each other.
+
+You glance around and see the whitworth couple in the corner of the room. They seem to be whispering something to each other while eyeing Edward up and down. Their whispers are too quiet to decipher, but it is safe to assume that they still suspect Edward of the crime after all this time.
+You collect your thoughts, take a deep breath and decide to [[start the trial]], which will hopefully resolve the mystery of Alfred Jones’ murder, and end this dark chapter in the island’s story.
+</tw-passagedata><tw-passagedata pid="130" name="start the trial" tags="" position="1098.6666666666667,2915.666666666666" size="100,100">You clear your throat to catch everyone’s attention, and make it known that the trial is starting. The participants make their way to the center of the reception, just in front of the resort’s grand entrance. The fog outside has now developed into a dank, impenetrable opaque wall. Not long after everyone forms a circle, the silence is broken.
+
+//“We appreciate your efforts to come out here and investigate, but we already know our culprit”, beckons Jason. “Edward Shanks broke into Alfred’s office, killed him and stole his jewellery”.//
+
+//“Yeah!”// , exclaims Lyla. //“That slimeball murdered Alfred in cold blood. Hopefully now we can serve him the justice he deserves, unlike those hopeless courts who let him walk all those years ago“.//
+
+You look around and [[see Edward]].</tw-passagedata><tw-passagedata pid="131" name="see Edward" tags="" position="1097,3120.666666666666" size="100,100">Edward clenches his fist as he is being talked about. You suspect he wants to defend himself, but understand that he is more than likely exhausted from this kind of labelling that he received in his life after his trial in the past.
+
+It’s true that there are signs that point to Edward being the culprit, but your gut tells you that the numbers aren’t adding up, and that there is more to explore about this case before a conclusion should be made. You elevate your voice and command everyone’s attention one more time.
+
+//[[&quot;Jeremiah, you had no alibi in the case, yet you were never considered as a suspect. Could you explain to the room why that was?&quot;]]//</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
