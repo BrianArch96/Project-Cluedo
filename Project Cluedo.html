@@ -474,46 +474,49 @@ Seems like they did not know him.
 (set: $jason_confession_why_broken_glass_asked to false)
 }</tw-passagedata><tw-passagedata pid="76" name="question Jeremiah" tags="" position="1456,2203" size="100,100">[[Mr booth is it? I’ve got a couple questions I’d like to ask you if that&#39;s alright?-&gt; Booth Answer1]]
 
-[[You never submitted an alibi on the night of the murder yet you weren’t the prime suspect, can you explain this? Why didn’t you submit one?-&gt;Booth Answer2]]</tw-passagedata><tw-passagedata pid="77" name=" Booth Answer1" tags="" position="1725,2451" size="100,100">(if: $jeremiahOpinion is false)[jeremiah: Oh, hello there that is me correct. You must be another reporter, I’ve seen quite a few of you over the years not much has come from it but I will oblige to help you in what you need.]
+[[You never submitted an alibi on the night of the murder yet you weren’t the prime suspect, can you explain this? Why didn’t you submit one?-&gt;Booth Answer2]]</tw-passagedata><tw-passagedata pid="77" name=" Booth Answer1" tags="" position="1725,2451" size="100,100">(if: $hasMetJeremiah is 1)[jeremiah: Oh, hello there that is me correct. You must be another reporter, I’ve seen quite a few of you over the years not much has come from it but I will oblige to help you in what you need.]
 
 [[I was wondering if you could point me in the right direction, why was it that your alibi wasn’t documented in the case?-&gt;Booth Answer2]]
 
-[[What was your relation to the murder victim Alfred? I heard he was not the greatest of people when it came to treating his employees-&gt;Booth Answer6]]
-(set: $jeremiahOpinion to true)</tw-passagedata><tw-passagedata pid="78" name="Booth Answer2" tags="" position="1828,2576" size="100,100">jeremiah: I was up on the balcony, that&#39;s where I like to go for some peace and quite.
+[[What was your relation to the murder victim Alfred? I heard he was not the greatest of people when it came to treating his employees-&gt;Booth Answer6]]</tw-passagedata><tw-passagedata pid="78" name="Booth Answer2" tags="" position="2011.3333333333333,2489.3333333333335" size="100,100">jeremiah: I was up on the balcony, that&#39;s where I like to go for some peace and quite.
 
-(if: $jeremiahOpinion is true)[[[That’s it? Fair enough I suppose that wouldn’t hold up in court anyways.-&gt; Booth Answer3]]]
+[[That’s it? Fair enough I suppose that wouldn’t hold up in court anyways.-&gt; Booth Answer3]]
 
-(if: $jeremiahOpinion is false)[[[Player: That is all you seen on the night? surely a man of your position hears and sees throught the walls of this place? tell me what happened-&gt; Booth Answer4]]]
-</tw-passagedata><tw-passagedata pid="79" name=" Booth Answer3" tags="" position="1772,2705" size="100,100">jeremiah: Actually I’m not usually the person to do this but you seem like you want to make a change in this place. On the night of the murder, on that night Edward Shank.. as you probably know the prime suspect &amp; I shared a smoke up on that balcony.
+[[Player: That is all you seen on the night? surely a man of your position hears and sees throught the walls of this place? tell me what happened-&gt; Booth Answer4]]
+</tw-passagedata><tw-passagedata pid="79" name=" Booth Answer3" tags="" position="1772,2703.3333333333335" size="100,100">jeremiah: Actually I’m not usually the person to do this but you seem like you want to make a change in this place. On the night of the murder, on that night Edward Shank.. as you probably know the prime suspect &amp; I shared a smoke up on that balcony.
 
 I gave that information to the police but they wouldn&#39;t listen, it seemed as if they had some sort of hidden agenda. I hope that gives you something to work with don&#39;t trust everying you see in the reports kid.
 
-(set: $hasMetJeremiah to 1)
+&#39;&#39;Booth will remember that you listened toi his side of the story.&#39;&#39;
 
+(set: $hasMetJeremiah to 1)
+(set: $jeremiahOpinion is true)
 [[Return to reception-&gt;reception]]
 &#39;&#39;Notebook updated&#39;&#39;
 [[Open Notebook-&gt;open notebook]]
-</tw-passagedata><tw-passagedata pid="80" name=" Booth Answer4" tags="" position="1891,2701" size="100,100">jeremiah: Yeah I did see something that night but it wasn&#39;t a big deal the cops didn&#39;t believe me and neither would you..
+</tw-passagedata><tw-passagedata pid="80" name=" Booth Answer4" tags="" position="2154.3333333333335,2656" size="100,100">jeremiah: Yeah I did see something that night but it wasn&#39;t a big deal the cops didn&#39;t believe me and neither would you..
 
-[[tell me!-&gt; Booth Answer5]]</tw-passagedata><tw-passagedata pid="81" name=" Booth Answer5" tags="" position="1975,2834" size="100,100">jeremiah: Okay okay I&#39;ll tell you what you want but just stop harrasing me?
+[[Dont hide anything from me, tell me now!-&gt; Booth Answer5]]
+
+[[Hey, I&#39;m on your side I&#39;m just trying to get to the bottom of this case. I&#39;ll listen to what everyone has to say-&gt; Booth Answer3]]</tw-passagedata><tw-passagedata pid="81" name=" Booth Answer5" tags="" position="2090,2805.6666666666665" size="100,100">jeremiah: Okay okay I&#39;ll tell you what you want but just stop harrasing me?
 
 On the night of the murder, I was with the main suspect Edward Shank, we shared a cigerette on the balcony above the garden, I told the cops about this already but you wont find it in the reports, they didn&#39;t believe me. That was it. If you think that&#39;s worth your time there you go now leave me alone. Please!
 
-(set: $hasMetJeremiah to 1)
+&#39;&#39;Booth will remember how you acted&#39;&#39;
 
+(set: $hasMetJeremiah to 1)
+(set: $jeremiahOpinion is false)
 [[Your motives as specified in the case brief say that you had a great hatred for Albert can you explain yourself?-&gt;Booth Answer8]]
 [[Return to reception-&gt;reception]]
 &#39;&#39;Notebook updated&#39;&#39;
-[[Open Notebook-&gt;open notebook]]</tw-passagedata><tw-passagedata pid="82" name="Booth Answer6" tags="" position="1631,2576" size="100,100">jeremiah: Don&#39;t get me wrong in my opinion, Alfred was a bad person but people exaggerated over how they were treated here at the resort.
+[[Open Notebook-&gt;open notebook]]</tw-passagedata><tw-passagedata pid="82" name="Booth Answer6" tags="" position="1492.6666666666667,2542.666666666667" size="100,100">jeremiah: Don&#39;t get me wrong in my opinion, Alfred was a bad person but people exaggerated over how they were treated here at the resort.
 
 Don&#39;t you think I would have left and not stayed all these years? 
 
 [[Wasn&#39;t that the reason you were a suspect to begin with? Sources say that you did hate the man-&gt;Booth Answer7]]</tw-passagedata><tw-passagedata pid="83" name="Booth Answer7" tags="" position="1573,2702" size="100,100">jeremiah: Your sources are wrong! I should have never been in this mess from the start. It all got pinned on me at the begining of the investigation.. &quot;I did it in hate for the man&quot;, &quot;I did it for the money&quot;, &quot;I did it because I&#39;m insane&quot; do you know how hard it was to me a man of my background living in the 1950&#39;s? 
 
 Your generation has it much easier now
-
-(set: $jeremiahOpinion to false)
-
+(set: $hasMetJeremiah to 1)
 [[I&#39;m sorry-&gt; Booth Answer1]]</tw-passagedata><tw-passagedata pid="84" name="Booth Answer8" tags="" position="2047,2964" size="100,100">jeremiah: That was all lies, I never hated the man enough to kill him! Yes he mistreated his staff, yes people have quit in the past due to how he was with them but did he deserve to die? that&#39;s gods decision to make not mine.
 
 *You can see genuine anger in jeremiahs eye&#39;s. Is it the type of anger that could kill a man? Or has he been tormented all these years after the murder by those accusations as an innocent man..*
