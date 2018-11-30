@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Project Cluedo" startnode="1" creator="Twine" creator-version="2.2.1" ifid="7576BCC8-4CE5-40DD-965B-F3F8A3A40A65" zoom="0.6" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Acme|Black+Han+Sans|Indie+Flower|Lobster+Two|Ramaraja');
+<tw-storydata name="Project Cluedo" startnode="1" creator="Twine" creator-version="2.2.1" ifid="7576BCC8-4CE5-40DD-965B-F3F8A3A40A65" zoom="0.25" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Acme|Black+Han+Sans|Indie+Flower|Lobster+Two|Ramaraja');
 
 tw-story {
   background-color: #14061e;
@@ -40,21 +40,21 @@ tw-story[tags~="beach"]{
 
 tw-story[tags~="bench"]{
   background-color: #6b7069;
-  background-image: linear-gradient(#3ebc18, #657a5d, #6b7069);
-  color: black;
+  background-image: linear-gradient(#1834bc, #101f69, #1834bc);
+  color: white;
   font-family: 'Black Han Sans', sans-serif;
 }
 
 tw-story[tags~="bar"]{
   background-color: #350e8c;
-  background-image: linear-gradient(#771d71, #350e8c, #771d71);
+  background-image: linear-gradient(#691065, #350e8c, #771d71);
   color: black;
   font-family: 'Ramaraja', serif;
 }
 
 tw-story[tags~="garden"]{
   background-color: #086d0d;
-  background-image: linear-gradient(#6baa1e, #086d0d, #472605);
+  background-image: linear-gradient(#aa331e, #6c6d08, #aa331e);
   color: black;
   font-family: 'Lobster Two', cursive;
 }
@@ -91,6 +91,7 @@ mark{
     
 }
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
 
@@ -106,6 +107,7 @@ mark{
 
 
     
+
 
 
 
@@ -200,8 +202,10 @@ Edward&#39;s revenue went into a sharp decline and more importantly his pride cr
 
 This, accompanied with his charming personality and reputation is why he was named as the &#39;&#39;&#39;prime suspect&#39;&#39; in the investigation, oh so many years ago.</tw-passagedata><tw-passagedata pid="17" name="edward alibi act1" tags="notebook" position="486,1510" size="100,100">Edward claimed that he was out drinking with associates at the time.
 Due to his status and nature, most people at the resort didn&#39;t believe him and still to this day, he&#39;s treated at the main suspect.
-Edward claims that [[Jeremiah Booth]] can clear his name, usually found in the &#39;&#39;gardens&#39;&#39;</tw-passagedata><tw-passagedata pid="18" name="jason traits act1" tags="notebook" position="172,927" size="100,100">Jason seems to a quiet and well spoken individual who keeps to himself.
-He doesn&#39;t concern himself with the other ghosts.</tw-passagedata><tw-passagedata pid="19" name="jason looks act1" tags="notebook" position="43,936" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="jason motive act1" tags="notebook" position="43,1061" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="jason alibi act1" tags="notebook" position="173,1062" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="22" name="jeremiah traits act1" tags="notebook" position="516,929" size="100,100">Jeremiah has been working at the resort since it&#39;s opening.
+Edward claims that [[Jeremiah Booth]] can clear his name, usually found in the &#39;&#39;gardens&#39;&#39;</tw-passagedata><tw-passagedata pid="18" name="jason traits act1" tags="notebook" position="173.66666666666666,937" size="100,100">Jason seems to a quiet and well spoken individual who keeps to himself.
+He doesn&#39;t concern himself with the other ghosts.</tw-passagedata><tw-passagedata pid="19" name="jason looks act1" tags="notebook" position="43,936" size="100,100">Jason is a tall and stocky, but quiet man. You can tell by his stature that he would be well able to fight, and you can tell by his face that he probably used those skills before.</tw-passagedata><tw-passagedata pid="20" name="jason motive act1" tags="notebook" position="43,1061" size="100,100">Jason&#39;s relationship with Alfred is a mystery. You cannot think of any reason why Jason would kill him.
+
+His lack of enthusiasm to cooperate does seem a little suspicious, however.</tw-passagedata><tw-passagedata pid="21" name="jason alibi act1" tags="notebook" position="173,1062" size="100,100">According to Jason, he was sitting at the park benches at the time of the murder.</tw-passagedata><tw-passagedata pid="22" name="jeremiah traits act1" tags="notebook" position="516,929" size="100,100">Jeremiah has been working at the resort since it&#39;s opening.
 
 He has been the longest lasting employee of Alfred as many people come and go over time from usually finding better paying jobs or unable to be worked so hard. 
 
@@ -302,9 +306,16 @@ You look in the direction that the voice came from and see that whom could not b
 (if: $hasMetEdward)[//&quot;I told you everything I know, boy&quot;//, Edward utters as he notices your return. //&quot;The rest is up to you, good luck.&quot;//
 
 [[Return to reception-&gt;reception]]]
-[[Open Notebook-&gt;open notebook]] </tw-passagedata><tw-passagedata pid="46" name="benches" tags="bench" position="1599,2093" size="100,100">You arrive at a path overlooking the lake. You spot a park bench perfectly situated for viewing the scenery and on it, the ghostly figure of a stern, stocky young man. He seems to be looking into the distance, lost in thought
+[[Open Notebook-&gt;open notebook]] </tw-passagedata><tw-passagedata pid="46" name="benches" tags="bench" position="1597.3333333333333,2078" size="100,100">(if: not $hasMetJason)[
+You arrive at a path overlooking the lake. You spot a park bench perfectly situated for viewing the scenery and on it, the ghostly figure of a stern, stocky young man. He seems to be looking into the distance, lost in thought
 
-//[[&quot;Are you Jason?&quot;]]//</tw-passagedata><tw-passagedata pid="47" name=" garden" tags="garden" position="2070,2060" size="100,100">(if: not $hasMetJeremiah)
+//[[&quot;Are you Jason?&quot;]]//
+]
+(else:)[
+Jason is still here, but it doesn&#39;t seem like you&#39;re going to get much more information out of him
+
+[[Return to reception|reception]]
+]</tw-passagedata><tw-passagedata pid="47" name=" garden" tags="garden" position="2070,2060" size="100,100">(if: not $hasMetJeremiah)
 [Even though it has been years since this island has had anyone to maintain it, the garden still appears as a beautiful meadow. Flowers are blooming and fruit is ripening on the trees. The morning dew still sits on the tips of the lawngrass.
 
 Off in the corner of the garden stands an aged man in a grey jumpsuit. You can tell just from his posture that he’s been through a lot, and probably worked hard to get what he wanted in life.
@@ -864,13 +875,9 @@ Edward butts in.
 
 The others in the group chime in about their deaths and it seems that they all vividly remember their passing.
 
+Surprised at the fact that everyone vividly remembered their deaths, including Edward, who died in a similar fashion, Alfred begins to doubt that his cause of death was from being struck in the head.
 
-
-???
-&quot;It seems that with all the loose ends here and with your strange misremembering of your death Alfred and what seems to be the blame directed at Edward for the murder, someone might have tried to hide themselves from being the murderer.&quot;
-???
-
-Alfred responds: //&quot;After all these years of being so sure it was Edward that commited the murder. I&#39;m not sure what I think anymore.&quot;//
+//&quot;After all these years of being so sure it was Edward that commited the murder. I&#39;m not sure what I think anymore.&quot;//
 
 [[It seems like there is more to this case than meets the eye-&gt;who to press for more]]</tw-passagedata><tw-passagedata pid="115" name="Prosecute Jason Price" tags="" position="1324,5395" size="100,100">The Whitworths sigh in relief. You notice as you look around that everyone else looked like they had come to the same conclusion. Jason emits visible signs of discomfort as the attention is suddenly shifted in his direction. Unwilling to lay down and accept his sentencing, he retaliates:
 
@@ -975,13 +982,14 @@ Alfred responds: //&quot;After all these years of being so sure it was Edward th
 	
 	[[continue]]</tw-passagedata><tw-passagedata pid="127" name="continue" tags="" position="1330,7013" size="100,100">	He eventually dissolves entirely, leaving you alone in the reception. The case of Albert Jones’ murder has been solved, and the true culprit, although posthumously, has been tried. You make your way back to the boat, leaving the island behind, and with a story to tell.
 
-	THE END</tw-passagedata><tw-passagedata pid="128" name="trial" tags="" position="1098,2588" size="100,100">You feel that you’ve gathered all the evidence that you can, and decide that It is time to summon everyone for a trial. You revisit each area one more time and gather the suspects to uncover the mystery of this island [[once and for all]].</tw-passagedata><tw-passagedata pid="129" name="once and for all" tags="" position="1098,2753" size="100,100">You sit in the reception awaiting the arrival of the others. You can’t help but notice that the fog that shadows the island is getting thicker, as if it were somehow aware that the story of Albert’s murder was accelerating toward its overdue conclusion.
+	THE END</tw-passagedata><tw-passagedata pid="128" name="trial" tags="" position="1098,2588" size="100,100">You feel that you’ve gathered all the evidence that you can, and decide that It is time to summon everyone for a trial. You revisit each area one more time and gather the suspects to uncover the mystery of this island [[once and for all]].</tw-passagedata><tw-passagedata pid="129" name="once and for all" tags="" position="1098,2754.6666666666665" size="100,100">You sit in the reception awaiting the arrival of the others. You can’t help but notice that the fog that shadows the island is getting thicker, as if it were somehow aware that the story of Albert’s murder was accelerating toward its overdue conclusion.
 
 After a few minutes, the room fills with a full party of suspects. You notice Alfred and Edward passing slight glances to one another. You sense that they normally keep their distance from one another, and that this is the first time in a while that they have seen each other.
 
 You glance around and see the Whitworth couple in the corner of the room. They seem to be whispering something to each other while eyeing Edward up and down. Their whispers are too quiet to decipher, but it is safe to assume that they still suspect Edward of the crime after all this time.
 You collect your thoughts, take a deep breath and decide to [[start the trial]], which will hopefully resolve the mystery of Alfred Jones’ murder, and end this dark chapter in the island’s story.
-</tw-passagedata><tw-passagedata pid="130" name="start the trial" tags="" position="1098,2928" size="100,100">You clear your throat to catch everyone’s attention, and make it known that the trial is starting. The participants make their way to the center of the reception, just in front of the resort’s grand entrance. The fog outside has now developed into a dank, impenetrable opaque wall. Not long after everyone forms a circle, the silence is broken.
+
+[[Check out your notebook one last time.-&gt;open notebook]]</tw-passagedata><tw-passagedata pid="130" name="start the trial" tags="" position="1098,2928" size="100,100">You clear your throat to catch everyone’s attention, and make it known that the trial is starting. The participants make their way to the center of the reception, just in front of the resort’s grand entrance. The fog outside has now developed into a dank, impenetrable opaque wall. Not long after everyone forms a circle, the silence is broken.
 
 //“We appreciate your efforts to come out here and investigate, but we already know our culprit”, beckons Jason. “Edward Shanks broke into Alfred’s office, killed him and stole his jewellery”.//
 
